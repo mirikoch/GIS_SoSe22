@@ -7,32 +7,125 @@
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
     <meta name = "keywords" content = "PhysioTool, Physiotherapie, Eigenübungen" />
     <meta name = "author" content = "Miriam Koch" />
-
+    <link rel="stylesheet" href="plan.css" />
     <title> PhysioTool Plan </title>
 
   </head>
 
   <body>
-    <header> Konfigurator </header>
-    <main>
-        <h1> Individuellen Plan hier erstellen </h1>
 
-        <p> Wählen Sie das zutreffende Krankheitsbild aus:</p>
+    <div id="navigation">
+
+      <div class="wrapper">
+
+          <div id="logo"> 
+           <p> PT </p>
+          </div>
+
+          <p id="menu"> 
+            <a href="index.html"> Home </a>
+            <a href="http://127.0.0.1:5500/PhysioTool_Koch/plan.html"> Konfigurator </a>
+            <a href="#"> Über uns </a>
+            <a href="#"> Kontakt </a>
+          </p>
+
+      </div>
+    </div>
+
+    <div id="planBanner"> 
+      <h1> PhysioTool </h1>
+    </div>
+
+    <div id="container">
+      <p>Individuellen Plan hier erstellen</p>
+    </div>
+    
+    <div class="backgroundcontainer">
+      
+        <div class="krankheitsbild"> 
+            <div class="textkrankheitsbild">
+               <p> Bandscheibenvorfall </p>
+            </div>
+
+            <div class="bildkrankheitsbild">
+               <img src="bsv.png" alt="Bandscheibenvorfall" titel="Bandscheibenvorfall">
+             </div>
+
+        </div>
+
+        <div class="krankheitsbild"> 
+           <div class="textkrankheitsbild">
+              <p> Kreuzbandruptur</p>
+            </div>
+
+           <div class="bildkrankheitsbild">
+              <img src="vkb.png" alt="Kreuzbandruptur" titel="Kreuzbandruptur">
+           </div>
+        </div>
+
+        <div class="krankheitsbild"> 
+            <div class="textkrankheitsbild">
+               <p> Sprunggelenksdistorsion</p>
+             </div>
+
+            <div class="bildkrankheitsbild">
+               <img src="osg.png" alt="Sprunggelenksdistorsion" titel="Sprunggelenksdistorsion">
+            </div>
+         </div>
+
+       <div class="krankheitsbild"> 
+           <div class="textkrankheitsbild">
+              <p> Hüft TEP</p>
+            </div>
+
+           <div class="bildkrankheitsbild">
+              <img src="htep.png" alt="Hüft TEP" titel="Hüft TEP">
+            </div>
+       </div>
+
+        <div class="krankheitsbild"> 
+           <div class="textkrankheitsbild">
+             <p> Knie TEP</p>
+            </div>
+
+            <div class="bildkrankheitsbild">
+              <img src="ktep.png" alt="Knie TEP" titel="Knie TEP">
+            </div>
+       </div>
+
+       <div class="krankheitsbild"> 
+           <div class="textkrankheitsbild">
+               <p> Distale Radiusfraktur</p>
+            </div>
+
+            <div class="bildkrankheitsbild">
+               <img src="drf.png" alt="Distale Radiusfraktur" titel="Distale Radiusfraktur">
+           </div>
+      </div>
+   </div>
+
         <!-- Das hier sollen dann alle noch einzelne Seiten werden, auf dessen Links man dann klicken kann -->
-        <h3> Bandscheibenvorfall </h3>
-        <h3> Vordere Kreuzbandruptur </h3>
-        <h3> Sprunggelenksdistorsion </h3>
-        <h3> Hüft TEP </h3>
-        <h3> Knie TEP </h3>
-        <p> … </p>
+        
         <form> 
             <div>
                 <label> Suche: </label>
                 <input type="suchen" />
             </div>
         </form>
-    </main>
-    <footer>  </footer>
+    
+  <div class="footerdistance">
+    <p> </p>
+  </div>
+    
+     <footer id="footer"> 
+          <div class="footer">
+            <p> FOOTER </p>
+          </div>
+     </footer> 
+    
+   
+  
+
   </body>
 
 </html>
