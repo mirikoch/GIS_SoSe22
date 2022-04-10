@@ -178,8 +178,7 @@ nav input[type="checkbox"]{
 
 /*INHALT*/
 .weekwrapper{
-    margin-top: 100px;
-    margin-bottom: 200px;
+    
     padding: 100px;
     display: flex;
     justify-content: space-around;
@@ -194,20 +193,27 @@ nav input[type="checkbox"]{
     margin: 20px;
     margin-left: 40px;
     margin-right: 40px;
-    height: 100px;
+    height: fit-content;
     width: 80%;
     padding: 50px;
-    padding-top: 100px;
+    padding-top: 70px;
 
     text-align:center;
     background-color:rgba(97, 202, 226, 0.8);
     border-radius: 10px;
+
 }
+
 summary::-webkit-details-marker{
     display:none;
     float: left;
     text-align: left;
 }
+
+.week p{
+    padding: 100px;
+}
+
 /* FOOTER */
 .footerdistance {
     min-height: 250px;

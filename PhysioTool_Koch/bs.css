@@ -9,7 +9,7 @@
 .wrapper {
     width: 960px;
     max-width: 90%;
-    margin: 0;
+    margin: 0 auto;
 }
 
 /* NAVIGATION*/
@@ -177,17 +177,18 @@ nav input[type="checkbox"]{
 }
 
 /* BANNER */
-#banner {
+
+#planBanner {
     width: 100%;
     height: 700px;
     z-index: 0;
-  
+
     background: 
-    url(banner.jpg);
+    url(planBanner.jpg);
     background-size: cover;
 }
 
-#banner h1 {
+#planBanner h1 {
     padding-top: 350px;
     text-align: center;
     color: white;
@@ -195,56 +196,56 @@ nav input[type="checkbox"]{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* INHALT */
-#content {
-    padding-bottom: 70px;
-    text-align: center;
-    background-color: azure;
+#container {
     width: 100%;
-}
-
-.wrapper2 {
-    padding: 100px;
+    background-color: #f9e506;
     
-    text-align: left;
-}
-
-.wrapper2 ::first-letter{
-    font-size: 30px;
-    float: left;
-    padding-right: 5px;
-    
-}
-.container {
-    letter-spacing: 4px;
-   /* display: flex;*/
-    align-items: center;
     text-align: center;
-    background-color: azure;
+    color:white;
+    font-size:x-large;
+    padding: 50px;
 }
 
-.button {
-    padding: 2em 3em;
-    width: 200px;
-    height: 50px;
-    border: none;
-    color: white;
-    background-color:rgba(97, 202, 226, 0.8);
-    border-radius: 4px;
-    box-shadow: inset 0 0 0 0 #f9e506;
-    transition: ease-out 0.3s;
-    font-size: 2rem;
-    outline: none;
-    text-decoration: none;
+/* KRANKHEITSBILDER*/
+.backgroundcontainer {
+    background-color:azure;
+    width: 100%;  
+    
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.button:hover {
-    box-shadow: inset 300px 0 0 0 #f9e506;
+.krankheitsbild {
+    background-color: rgb(223, 218, 211);
+    width: 300px;
+    height: 500px;
+    margin: 20px;
+
+    padding: 20px;
+    text-align: center;
+    
 }
 
-html, body{
-    height:100%;
-    width: 100%;
+.textkrankheitsbild{
+    font-size:larger;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.bildkrankheitsbild {
+    padding: 20px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    transition: padding 2s ease;
+}
+
+.bildkrankheitsbild :hover{
+    padding-top: 10px;
+}
+
+.textkrankheitsbild a{
+    color:black;
 }
 
 /* FOOTER */
@@ -317,10 +318,6 @@ html, body{
 
 .left .content .social a span:hover{
     background: rgba(97, 202, 226, 0.8);
-}
-
-.center .content .fas {
-    padding-right: 10px;
 }
 
 .right form .text{
