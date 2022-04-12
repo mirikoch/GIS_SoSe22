@@ -17,23 +17,28 @@
   <body>
     
 
-    <div id="navigation">
-
-      <div class="wrapper">
-
-        <p id="logo"> 
-          <a href="index.html"> PT </a>
-        </p>
-
-          <p id="menu"> 
-            <a href="index.html"> Home </a>
-            <a href="http://127.0.0.1:5500/PhysioTool_Koch/plan.html"> Konfigurator </a>
-            <a href="#"> Über uns </a>
-            <a href="#"> Kontakt </a>
-          </p>
-
-      </div>
-    </div>
+    <nav>
+      <a class="logo" href="index.html"> PT </a>
+      <input type="checkbox" id="toggle_button">
+      <label for="toggle_button" class="toggle_button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+      <ul>
+        <li><a href="index.html"> Home </a></li>
+        <li class="expandable_li">
+          <input type="checkbox" id="products_checkbox">
+          <label for="products_checkbox"> Konfigurator </label>
+          <ul class="dropdown">
+            <li><a href="oEx.html"> Obere Extremität </a></li>
+            <li><a href="uEx.html"> Untere Extremität </a></li>
+            <li><a href="bs.html"> Wirbelsäule </a></li>
+          </ul>
+        <li><a href="#"> Über uns </a></li>
+        <li><a href="#"> Kontakt </a></li>
+      </ul>
+    </nav>
 
     <div class="weekwrapper">
       <div class="week">
