@@ -195,7 +195,7 @@ nav input[type="checkbox"]{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* INHALT */
+/* INHALT - Home */
 #content {
     padding-bottom: 70px;
     text-align: center;
@@ -245,6 +245,116 @@ nav input[type="checkbox"]{
 html, body{
     height:100%;
     width: 100%;
+}
+
+/* BANNER */
+
+#planBanner {
+    width: 100%;
+    height: 700px;
+    z-index: 0;
+
+    background: 
+    url(/img/planBanner.jpg);
+    background-size: cover;
+}
+
+#planBanner h1 {
+    padding-top: 350px;
+    text-align: center;
+    color: white;
+    font-size: 8em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#container {
+    width: 100%;
+    background-color: #f9e506;
+    
+    text-align: center;
+    color:white;
+    font-size:x-large;
+    padding: 50px;
+}
+
+/* INHALT-KRANKHEITSBILDER */
+.backgroundcontainer {
+    background-color:azure;
+    width: 100%;  
+    
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.krankheitsbild {
+    background-color: rgb(223, 218, 211);
+    width: 300px;
+    height: 500px;
+    margin: 20px;
+
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.textkrankheitsbild{
+    font-size:larger;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.bildkrankheitsbild {
+    padding: 20px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    transition: padding 2s ease;
+}
+
+.bildkrankheitsbild :hover{
+    padding-top: 10px;
+}
+
+.textkrankheitsbild a{
+    color:black;
+}
+
+/*INHALT-Übungsübersicht*/
+.weekwrapper{
+    
+    padding: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction:column;
+
+    background-color: azure;
+}
+
+.week{
+    margin: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    height: fit-content;
+    width: 80%;
+    padding: 50px;
+    padding-top: 70px;
+
+    text-align:center;
+    background-color:rgba(97, 202, 226, 0.8);
+    border-radius: 10px;
+
+}
+
+summary::-webkit-details-marker{
+    display:none;
+    float: left;
+    text-align: left;
+}
+
+.week p{
+    padding: 100px;
 }
 
 /* FOOTER */
@@ -367,76 +477,4 @@ html, body{
 
 .right form .btn button:hover{
     background: turquoise;
-}
-
-/* BANNER */
-
-#planBanner {
-    width: 100%;
-    height: 700px;
-    z-index: 0;
-
-    background: 
-    url(img/planBanner.jpg);
-    background-size: cover;
-}
-
-#planBanner h1 {
-    padding-top: 350px;
-    text-align: center;
-    color: white;
-    font-size: 8em;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-#container {
-    width: 100%;
-    background-color: #f9e506;
-    
-    text-align: center;
-    color:white;
-    font-size:x-large;
-    padding: 50px;
-}
-
-/* KRANKHEITSBILDER*/
-.backgroundcontainer {
-    background-color:azure;
-    width: 100%;  
-    
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.krankheitsbild {
-    background-color: rgb(223, 218, 211);
-    width: 300px;
-    height: 500px;
-    margin: 20px;
-
-    padding: 20px;
-    text-align: center;
-    
-}
-
-.textkrankheitsbild{
-    font-size:larger;
-    padding: 20px;
-    padding-top: 30px;
-}
-
-.bildkrankheitsbild {
-    padding: 20px;
-    padding-top: 150px;
-    padding-bottom: 100px;
-    transition: padding 2s ease;
-}
-
-.bildkrankheitsbild :hover{
-    padding-top: 10px;
-}
-
-.textkrankheitsbild a{
-    color:black;
 }
