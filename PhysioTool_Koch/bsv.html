@@ -9,8 +9,10 @@
     <meta name = "author" content = "Miriam Koch" />
 
     <script src="https://kit.fontawesome.com/f8be25ebfe.js" crossorigin="anonymous"></script>
+    <script src="js/cart.js" defer></script>
     <link rel="stylesheet" href="styles/styles.css"/>
-    <title> PhysioTool Home </title>
+    
+    <title> Bandscheibenvorfall (lumbal) </title>
 
   </head>
 
@@ -35,42 +37,291 @@
             <li><a href="uEx.html"> Untere Extremität </a></li>
             <li><a href="bs.html"> Wirbelsäule </a></li>
           </ul>
-        <li><a href="#"> Über uns </a></li>
-        <li><a href="#"> Kontakt </a></li>
+            <li><a href="#"> Kontakt </a></li>
+
+            
+            <li><a href="#">
+                <button class="account-btn">
+                   <i class="fas fa-user-alt"></i>
+                </button>
+                <span class="account-text"> My account</span>
+            </a></li>
+            <li><a href="checkout.html"> 
+              <i
+                    class="fas fa-shopping-cart shoppingCartButton"
+                ></i>
+                <span class="plan-text"> Plan </span>
+                <!--The total prices of products in the shopping cart -->
+                <h6 id="sum-prices"></h6>
+            </a></li>
+        
       </ul>
+
+
+
     </nav>
 
     <div class="weekwrapper">
       <div class="week">
-        <details open="open">
+        <details>
           <summary> 
-            <h2> Woche 1</h2>
+            <h2> Entzündungsphase</h2>
+            <h4> 0 - 5 Tage </h4>
+            <h4> Ziel: Entzündung nicht stören, kaum Reize, Schmerzlinderung und Entlastung </h4>
           </summary>
-          <p> Übungen ... </p>
+
+          <div class="übungenwrapper">
+            <div class="übungen">
+              <a class="übungsname" href="#"> Entlastungslagerung 
+                <p> RL, Beine auf dem Pezziball/Stuhl o.ä. </p>
+              </a>
+              <div class="shop-item">
+                <span class="shop-item-title"></span>
+                <img class="shop-item-image" src="Images/Album 2.png">
+                <div class="shop-item-details">
+                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="übungenwrapper">
+            <div class="übungen">
+              <a class="übungsname" href="#"> Abdominal Hollowing
+                <p> Übung zur segmentalen Stabilisation </p>
+                <P> Stufe 1 </p>
+              </a>
+              <div class="shop-item">
+                <span class="shop-item-title"></span>
+                <img class="shop-item-image" src="Images/Album 2.png">
+                <div class="shop-item-details">
+                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="übungenwrapper">
+            <div class="übungen">
+              <a class="übungsname" href="#"> Beckenkippung
+                <p> Beginnende Mobilisation, schmerzadaptiert </p>
+              </a>
+              <div class="shop-item">
+                <span class="shop-item-title"></span>
+                <img class="shop-item-image" src="Images/Album 2.png">
+                <div class="shop-item-details">
+                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="übungenwrapper">
+            <div class="übungen">
+              <a class="übungsname" href="#"> Beginnendes Bridging
+                <p> unter berücksichtigung der Core-Stabilität, schmerzadaptiert </p>
+              </a>
+              <div class="shop-item">
+                <span class="shop-item-title"></span>
+                <img class="shop-item-image" src="Images/Album 2.png">
+                <div class="shop-item-details">
+                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+        
+
+
+      <div class="week">
+        <details>
+          <summary> 
+            <h2> Proliferationsphase </h2>
+            <h4> 5 - 21 Tage </h4>
+            <h4> Ziel: physiologischer Belastungs- und Bildungsreiz, schmerzadaptiert, physiologische Bewegungen </h4>
+          </summary>
+          <ul class="übungen">
+
+            <li><a href="#"> Anleitung Bücken-Heben-Tragen
+              <p> Rückengerecht </p> 
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+
+            <li><a href="#"> Bridging 
+              <p> Erarbeiten verschiedener Variationen, schmerzadaptiert </p>
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+
+            <li><a href="#"> Abdominal Hollowing
+              <p> Stufe 2 - 7 </p>
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+
+            <li><a href="#"> Kräfer-Übung
+              <p> Kräftigung der Bauchmuskulatur </p> 
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+
+            <li><a href="#"> Vierfüßlerstand
+              <p> Erarbeiten verschiedener Variationen </p> 
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+          </ul>
         </details>
       </div>
       <div class="week">
-        <details open="open">
+        <details>
           <summary> 
-            <h2> Woche 2</h2>
+            <h2> Konsolidierungsphase </h2>
+            <h4> 21 - 60 Tage </h4>
+            <h4> Ziel: Zug und Druck auf die entstehende Narbe bringen, korrekte Ausrichtung und Belastbarkeit des neuen Kollagen Typ 1 </h4>
           </summary>
-          <p> Übungen ... </p>
+          <ul class="übungen">
+
+            <li><a href="#"> Bridging 
+              <p> Steigerung der Variationen </p>
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+
+            <li><a href="#"> Abdominal Hollowing
+              <p> Stufe 8 </p>
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+
+            <li><a href="#"> Kräfer-Übung
+              <p> Steigerung der Hebellänge </p> 
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+
+            <li><a href="#"> Side-Plank
+              <p> zuerst statisch, dann dynamisch </p> 
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+          </ul>
         </details>
       </div>
       <div class="week">
-        <details open="open">
+        <details>
           <summary> 
-            <h2> Woche 3</h2>
+            <h2> Organisationsphase </h2>
+            <h4> 60 - 360 Tage </h4>
+            <h4> Ziel: Einbauen des Übungsprogramm in der Alltag </h4>
           </summary>
-          <p> Übungen ... </p>
-        </details>
-      </div>
-      <div class="week">
-        <details open="open">
-          <summary> 
-            <h2> Woche 4</h2>
-          </summary>
-          <p> Übungen ... </p>
+          <ul class="übungen">
+
+            <li><a href="#"> Bridging 
+              <p> Alle Variationen </p>
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+
+            <li><a href="#"> Abdominal Hollowing
+              <p> Alle Variationen </p>
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+
+            <li><a href="#"> Kräfer-Übung
+              <p> Alle Variationen </p> 
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+
+            <li><a href="#"> Side-Plank
+              <p> Alle Variationen </p> 
+              <div class="buttonwrapper"> 
+       
+                <a href="#" class="button"> Hinzufügen 
+                  <i class="fas fa-cart-plus"></i>
+                </a>
+                <a href="#" class="button"> Details </a>
+              
+            </div>
+            </a></li>
+          </ul>
         </details>
       </div>
     </div>

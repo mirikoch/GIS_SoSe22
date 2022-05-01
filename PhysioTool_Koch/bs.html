@@ -10,6 +10,7 @@
 
     <script src="https://kit.fontawesome.com/f8be25ebfe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/styles.css" />
+    <script src="js/scripts.js" defer></script>
     <title> PhysioTool Home </title>
 
   </head>
@@ -35,9 +36,28 @@
             <li><a href="uEx.html"> Untere Extremität </a></li>
             <li><a href="bs.html"> Wirbelsäule </a></li>
           </ul>
-        <li><a href="#"> Über uns </a></li>
-        <li><a href="#"> Kontakt </a></li>
+            <li><a href="#"> Kontakt </a></li>
+
+            
+            <li><a href="#">
+                <button class="account-btn">
+                   <i class="fas fa-user-alt"></i>
+                </button>
+                <span class="account-text"> My account</span>
+            </a></li>
+            <li><a href="checkout.html"> 
+              <i
+                    class="fas fa-shopping-cart shoppingCartButton"
+                ></i>
+                <span class="plan-text"> Plan </span>
+                <!--The total prices of products in the shopping cart -->
+                <h6 id="sum-prices"></h6>
+            </a></li>
+        
       </ul>
+
+
+
     </nav>
 
     <div id="planBanner"> 
@@ -52,7 +72,7 @@
         
           <div class="krankheitsbild"> 
               <div class="textkrankheitsbild">
-                <a href="bsv.html"> Bandscheibenvorfall </a>
+                <a href="bsv.html"> Bandscheibenvorfall (lumbal) </a>
               </div>
   
               <div class="bildkrankheitsbild">

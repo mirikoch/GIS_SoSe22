@@ -10,6 +10,7 @@
 
     <script src="https://kit.fontawesome.com/f8be25ebfe.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/styles.css"/>
+    <script src="js/cart.js" defer></script>
     <title> PhysioTool Home </title>
 
   </head>
@@ -31,26 +32,51 @@
           <input type="checkbox" id="products_checkbox">
           <label for="products_checkbox"> Konfigurator </label>
           <ul class="dropdown">
-            <li><a href="plan.html"> Obere Extremität </a></li>
-            <li><a href="plan.html"> Untere Extremität </a></li>
-            <li><a href="plan.html"> Wirbelsäule </a></li>
+            <li><a href="oEx.html"> Obere Extremität </a></li>
+            <li><a href="uEx.html"> Untere Extremität </a></li>
+            <li><a href="bs.html"> Wirbelsäule </a></li>
           </ul>
-        <li><a href="#"> Über uns </a></li>
-        <li><a href="#"> Kontakt </a></li>
+            <li><a href="#"> Kontakt </a></li>
+
+            
+            <li><a href="#">
+                <button class="account-btn">
+                   <i class="fas fa-user-alt"></i>
+                </button>
+                <span class="account-text"> My account</span>
+            </a></li>
+            <li><a href="checkout.html"> 
+              <i
+                    class="fas fa-shopping-cart shoppingCartButton"
+                ></i>
+                <span class="plan-text"> Plan </span>
+                <!--The total prices of products in the shopping cart -->
+                <h6 id="sum-prices"></h6>
+            </a></li>
+        
       </ul>
+
+
+
     </nav>
     
     <div class="weekwrapper">
       <div class="week">
-        <details open="open">
+        <details>
           <summary> 
             <h2> Woche 1</h2>
           </summary>
-          <p> Übungen ... </p>
+          <div class="shop-item">
+            <span class="shop-item-title"> Mobilisation </span>
+            <img class="shop-item-image" src="Images/Album 2.png">
+            <div class="shop-item-details">
+                <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+            </div>
+        </div>
         </details>
       </div>
       <div class="week">
-        <details open="open">
+        <details>
           <summary> 
             <h2> Woche 2</h2>
           </summary>
@@ -58,7 +84,7 @@
         </details>
       </div>
       <div class="week">
-        <details open="open">
+        <details>
           <summary> 
             <h2> Woche 3</h2>
           </summary>
@@ -66,7 +92,7 @@
         </details>
       </div>
       <div class="week">
-        <details open="open">
+        <details>
           <summary> 
             <h2> Woche 4</h2>
           </summary>
@@ -74,6 +100,8 @@
         </details>
       </div>
     </div>
+
+
     <div class="footerdistance">
         <p> </p>
       </div>

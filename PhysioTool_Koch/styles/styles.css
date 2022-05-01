@@ -176,6 +176,37 @@ nav input[type="checkbox"]{
     }
 }
 
+button:focus {
+    outline: none;
+}
+
+/* My account text*/
+.account-text {
+    
+    padding: 10px;
+}
+.account-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.account-btn:focus {
+    outline: none;
+}
+
+.plan-text {
+    padding: 10px;
+}
+
+#sum-prices {
+    padding-left: 5px;
+}
+
+
+
 /* BANNER */
 #banner {
     width: 100%;
@@ -319,6 +350,7 @@ html, body{
     color:black;
 }
 
+
 /*INHALT-Übungsübersicht*/
 .weekwrapper{
     
@@ -331,6 +363,12 @@ html, body{
 
     background-color: azure;
 }
+details > summary {
+    list-style: none;
+  }
+details > summary::-webkit-details-marker {
+    display: none;
+  }
 
 .week{
     margin: 20px;
@@ -344,17 +382,168 @@ html, body{
     text-align:center;
     background-color:rgba(97, 202, 226, 0.8);
     border-radius: 10px;
-
+    
 }
 
-summary::-webkit-details-marker{
-    display:none;
-    float: left;
-    text-align: left;
+.week summary {
+    cursor: pointer;
 }
 
-.week p{
-    padding: 100px;
+.week summary h2 {
+    margin: 20px;
+}
+
+.übungenwrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.übungen{
+    width: 300px;
+    height: fit-content;
+
+    background-color: rgb(223, 218, 211);
+    border-radius: 10px;
+
+    margin: 30px;
+    margin-top: 50px;
+    padding: 50px;
+   
+}
+
+.übungsname {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+
+    padding: 30px;
+
+    
+}
+
+.shop-item-details button{
+    height: 25px;
+    width: 100px;
+    margin: 20px;
+}
+
+/* CART */
+section {
+    margin: 30px;
+   
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color: #EB5757;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+    height: 50px;
+    width: 150px;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+/* Versuch */
+
+.btn-primary {
+    color: white;
+    background-color: #56CCF2;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #2D9CDB;
 }
 
 /* FOOTER */
