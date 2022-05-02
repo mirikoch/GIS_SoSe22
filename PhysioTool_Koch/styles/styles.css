@@ -65,15 +65,23 @@ nav ul a{
 
 .dropdown{
     height: min-content;
-    width: 200px;
     background:rgba(97, 202, 226);
-
+    width: 200px;
     display: none;
     flex-direction: column;
 
     position:absolute;
-    left: 0;
     top: 100px;
+}
+
+#drop1{
+    left: 0;
+    width: 200px;
+}
+
+#drop2{
+    right: 0;
+    width: 400px;
 }
 
 .dropdown li{
@@ -120,6 +128,12 @@ nav input[type="checkbox"]{
     width: 100%;
     background: white;
     border-radius: 100px;
+}
+
+.planwrapper{
+    width: 100px;
+    height:fit-content;
+    min-height: 500px;
 }
 
 @media(max-width: 650px){
@@ -412,6 +426,10 @@ details > summary::-webkit-details-marker {
    
 }
 
+.übungen h2, p{
+    padding-bottom: 20px;
+}
+
 .übungsname {
     text-decoration: none;
     text-align: center;
@@ -483,11 +501,56 @@ details > summary::-webkit-details-marker {
   }
 
   .übungstext{
-      text-align: start;
-      padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+
+  @media (max-width: 650px) {
+    .übungstext .inputnumberwrapper{
+    display: flex;
+    flex-direction: column; 
+    height:fit-content;
+    } 
+}
+
+.inputnumberwrapper{
+    text-align: start;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  input[type=number]{
+    padding: 10px;
+    border: 1px;;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    border-radius:10px;
+    width: 60px;
+    height: 40px;
+    margin: 30px;
+  }
+
+  input[type=text]{
+    width: 70%;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 15px;
+    border: 0;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    height:100px;
+  }
+
   .übungstext p{
-      padding: 20px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px;;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    border-radius:10px;
+    margin: 10px;
   }
 
   #overlay {
@@ -505,6 +568,10 @@ details > summary::-webkit-details-marker {
   #overlay.active {
     opacity: 1;
     pointer-events: all;
+  }
+
+  .buttonwrapper {
+      margin: 30px;
   }
 
 /* CART */
@@ -615,6 +682,7 @@ section {
     padding: 10px;
     width: fit-content;
     height: fit-content;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -761,3 +829,4 @@ button.btn.btn-primary.btn-purchase:hover {
 .right form .btn button:hover{
     background: turquoise;
 }
+

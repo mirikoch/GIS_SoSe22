@@ -33,28 +33,41 @@
         <li class="expandable_li">
           <input type="checkbox" id="products_checkbox">
           <label for="products_checkbox"> Konfigurator </label>
-          <ul class="dropdown">
+          <ul class="dropdown" id="#drop1">
             <li><a href="oEx.html"> Obere Extremität </a></li>
             <li><a href="uEx.html"> Untere Extremität </a></li>
             <li><a href="bs.html"> Wirbelsäule </a></li>
           </ul>
-            <li><a href="#"> Kontakt </a></li>
+
+        <li><a href="#"> Kontakt </a></li>
 
             
-            <li><a href="#">
-                <button class="account-btn">
-                   <i class="fas fa-user-alt"></i>
-                </button>
-                <span class="account-text"> My account</span>
-            </a></li>
-            <li><a href="checkout.html"> 
-              <i
-                    class="fas fa-shopping-cart shoppingCartButton"
-                ></i>
-                <span class="plan-text"> Plan </span>
-                <!--The total prices of products in the shopping cart -->
-                <h6 id="sum-prices"></h6>
-            </a></li>
+        <li><a href="#">
+            <button class="account-btn">
+                 <i class="fas fa-user-alt"></i>
+             </button>
+              <span class="account-text"> My account</span>
+        </a></li>
+
+
+        <li class="expandable_li">
+          <input type="checkbox" id="products_checkbox">
+          <a href="checkout.html"> Plan </a>
+      
+          <ul class="dropdown" id="drop2">
+            <div class="planwrapper">
+              <div class="itemwrapper">
+                  <div class="itemexample"></div>
+              </div>
+              <div class="itemwrapper">
+                  <div class="itemexample"></div>
+              </div>
+              <div class="itemwrapper">
+                  <div class="itemexample"></div>
+              </div>
+              <div class="totalwrapper"> TOTAL </div>
+            </div>
+          </ul>
         
       </ul>
     </nav>
@@ -72,9 +85,9 @@
 
           <div class="übungenwrapper">
             <div class="übungen">
-              <a data-modal-target="#modal" class="übungsname" href="#"> Entlastungslagerung 
+              <h2> Entlastungslagerung </h2>
                 <p> RL, Beine auf dem Pezziball/Stuhl o.ä. </p>
-              </a>
+        
               <div class="shop-item">
                 <span class="shop-item-title"></span>
                 <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
@@ -89,65 +102,177 @@
                         <button data-close-button class="close-button">&times;</button>
                       </div>
                       <div class="modal-body">
-                        <img class="shop-item-image" src="img/exercise.jpg">
+                        <div class="imagewrapper">
+                            <img class="shop-item-image" src="img/exercise.jpg">
+                        </div>
                         <div class="übungstext">
                             <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
-                            <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                            <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entstehen. 
                                 Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
                             </p>
                             <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                        </div>
+                        <div class="inputnumberwrapper">
+                            <input type="number" class="series" placeholder ="Serie" min="0">
+                            <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                            <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                        </div>  
+                        <div class="inputtextwrapper">
+                          <input type="text" class="comment" placeholder ="Kommentar...">
+                        </div>  
+                        <div class="buttonwrapper">
                             <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
-                        </div>
-                        </div>
-                      </div>
-                    <div id="overlay"></div>
+                        </div> 
+                    
+                  </div>
+                </div>
+              <div id="overlay"></div>
                    
             </div>
           
 
          
             <div class="übungen">
-              <a class="übungsname" href="#"> Abdominal Hollowing
-                <p> Übung zur segmentalen Stabilisation </p>
-                <P> Stufe 1 </p>
-              </a>
+              <h2> Abdominal Hollowing </h2>
+              <p> Übung zur segmentalen Stabilisation </p>
+              <P> Stufe 1 </p>
+        
               <div class="shop-item">
                 <span class="shop-item-title"></span>
-                <img class="shop-item-image" src="img/exercise.jpg">
+                <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                 <div class="shop-item-details">
                     <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                 </div>
               </div>
+                  <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                    <div class="modal" id="modal">
+                      <div class="modal-header">
+                        <div class="title"> Abdominal Hollowing </div>
+                        <button data-close-button class="close-button">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="imagewrapper">
+                            <img class="shop-item-image" src="img/exercise.jpg">
+                        </div>
+                        <div class="übungstext">
+                            <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                            <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                            </p>
+                            <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                        </div>
+                        <div class="inputnumberwrapper">
+                            <input type="number" class="series" placeholder ="Serie" min="0">
+                            <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                            <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                        </div>  
+                        <div class="inputtextwrapper">
+                          <input type="text" class="comment" placeholder ="Kommentar...">
+                        </div>  
+                        <div class="buttonwrapper">
+                            <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                        </div> 
+                    
+                  </div>
+                </div>
+              <div id="overlay"></div>
+                   
             </div>
           
 
          
             <div class="übungen">
-              <a class="übungsname" href="#"> Beckenkippung
-                <p> Beginnende Mobilisation, schmerzadaptiert </p>
-              </a>
+              <h2> Beckenkippung </h2>
+              <p> Beginnende Mobilisation, schmerzadaptiert </p>
+        
               <div class="shop-item">
                 <span class="shop-item-title"></span>
-                <img class="shop-item-image" src="img/exercise.jpg">
+                <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                 <div class="shop-item-details">
                     <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                 </div>
               </div>
+                  <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                    <div class="modal" id="modal">
+                      <div class="modal-header">
+                        <div class="title"> Entlastungslagerung </div>
+                        <button data-close-button class="close-button">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="imagewrapper">
+                            <img class="shop-item-image" src="img/exercise.jpg">
+                        </div>
+                        <div class="übungstext">
+                            <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                            <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                            </p>
+                            <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                        </div>
+                        <div class="inputnumberwrapper">
+                            <input type="number" class="series" placeholder ="Serie" min="0">
+                            <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                            <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                        </div>  
+                        <div class="inputtextwrapper">
+                          <input type="text" class="comment" placeholder ="Kommentar...">
+                        </div>  
+                        <div class="buttonwrapper">
+                            <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                        </div> 
+                    
+                  </div>
+                </div>
+              <div id="overlay"></div>
+                   
             </div>
          
 
           
             <div class="übungen">
-              <a class="übungsname" href="#"> Beginnendes Bridging
-                <p> unter berücksichtigung der Core-Stabilität, schmerzadaptiert </p>
-              </a>
+              <h2> Beginnendes Bridging </h2>
+              <p> unter berücksichtigung der Core-Stabilität, schmerzadaptiert </p>
+        
               <div class="shop-item">
                 <span class="shop-item-title"></span>
-                <img class="shop-item-image" src="img/exercise.jpg">
+                <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                 <div class="shop-item-details">
                     <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                 </div>
               </div>
+                  <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                    <div class="modal" id="modal">
+                      <div class="modal-header">
+                        <div class="title"> Entlastungslagerung </div>
+                        <button data-close-button class="close-button">&times;</button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="imagewrapper">
+                            <img class="shop-item-image" src="img/exercise.jpg">
+                        </div>
+                        <div class="übungstext">
+                            <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                            <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                            </p>
+                            <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                        </div>
+                        <div class="inputnumberwrapper">
+                            <input type="number" class="series" placeholder ="Serie" min="0">
+                            <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                            <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                        </div>  
+                        <div class="inputtextwrapper">
+                          <input type="text" class="comment" placeholder ="Kommentar...">
+                        </div>  
+                        <div class="buttonwrapper">
+                            <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                        </div> 
+                    
+                  </div>
+                </div>
+              <div id="overlay"></div>
+                   
             </div>
           </div>
         </details>
@@ -165,73 +290,237 @@
   
             <div class="übungenwrapper">
               <div class="übungen">
-                <a class="übungsname" href="#"> Anleitung Bücken-Heben-Tragen
-                  <p> Rückengerecht </p> 
-                </a>
+                <h2> Anleitung Bücken-Heben-Tragen </h2>
+                <p> Rückengerecht </p> 
+          
                 <div class="shop-item">
                   <span class="shop-item-title"></span>
-                  <img class="shop-item-image" src="img/exercise.jpg">
+                  <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                   <div class="shop-item-details">
                       <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                   </div>
                 </div>
+                    <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                      <div class="modal" id="modal">
+                        <div class="modal-header">
+                          <div class="title"> Entlastungslagerung </div>
+                          <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="imagewrapper">
+                              <img class="shop-item-image" src="img/exercise.jpg">
+                          </div>
+                          <div class="übungstext">
+                              <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                              <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                  Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                              </p>
+                              <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                          </div>
+                          <div class="inputnumberwrapper">
+                              <input type="number" class="series" placeholder ="Serie" min="0">
+                              <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                              <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                          </div>  
+                          <div class="inputtextwrapper">
+                            <input type="text" class="comment" placeholder ="Kommentar...">
+                          </div>  
+                          <div class="buttonwrapper">
+                              <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                          </div> 
+                      
+                    </div>
+                  </div>
+                <div id="overlay"></div>
+                     
               </div>
             
   
            
               <div class="übungen">
-                <a class="übungsname" href="#">  Bridging
-                  <p> Übung zur segmentalen Stabilisation </p>
-                  <P> Stufe 1 </p>
-                </a>
+                <h2> Bridging </h2>
+                <p> Übung zur segmentalen Stabilisation </p>
+          
                 <div class="shop-item">
-                  <span class="shop-item-title"> </span>
-                  <img class="shop-item-image" src="img/exercise.jpg">
+                  <span class="shop-item-title"></span>
+                  <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                   <div class="shop-item-details">
                       <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                   </div>
                 </div>
+                    <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                      <div class="modal" id="modal">
+                        <div class="modal-header">
+                          <div class="title"> Entlastungslagerung </div>
+                          <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="imagewrapper">
+                              <img class="shop-item-image" src="img/exercise.jpg">
+                          </div>
+                          <div class="übungstext">
+                              <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                              <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                  Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                              </p>
+                              <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                          </div>
+                          <div class="inputnumberwrapper">
+                              <input type="number" class="series" placeholder ="Serie" min="0">
+                              <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                              <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                          </div>  
+                          <div class="inputtextwrapper">
+                            <input type="text" class="comment" placeholder ="Kommentar...">
+                          </div>  
+                          <div class="buttonwrapper">
+                              <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                          </div> 
+                      
+                    </div>
+                  </div>
+                <div id="overlay"></div>
+                     
               </div>
             
   
            
               <div class="übungen">
-                <a class="übungsname" href="#"> Abdominal Hollowing
-                  <p> Stufe 2 - 7 </p>
-                </a>
+                <h2> Abdominal Hollowing </h2>
+                <p> Stufe 2 - 7 </p>
+          
                 <div class="shop-item">
                   <span class="shop-item-title"></span>
-                  <img class="shop-item-image" src="img/exercise.jpg">
+                  <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                   <div class="shop-item-details">
                       <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                   </div>
                 </div>
+                    <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                      <div class="modal" id="modal">
+                        <div class="modal-header">
+                          <div class="title"> Entlastungslagerung </div>
+                          <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="imagewrapper">
+                              <img class="shop-item-image" src="img/exercise.jpg">
+                          </div>
+                          <div class="übungstext">
+                              <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                              <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                  Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                              </p>
+                              <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                          </div>
+                          <div class="inputnumberwrapper">
+                              <input type="number" class="series" placeholder ="Serie" min="0">
+                              <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                              <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                          </div>  
+                          <div class="inputtextwrapper">
+                            <input type="text" class="comment" placeholder ="Kommentar...">
+                          </div>  
+                          <div class="buttonwrapper">
+                              <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                          </div> 
+                      
+                    </div>
+                  </div>
+                <div id="overlay"></div>
+                     
               </div>
            
               <div class="übungen">
-                <a class="übungsname" href="#"> Vierfüßlerstand
-                  <p> Erarbeiten verschiedener Variationen </p> 
-                </a>
+                <h2> Vierfüßlerstand </h2>
+                <p> Erarbeiten verschiedener Variationen </p>
+          
                 <div class="shop-item">
                   <span class="shop-item-title"></span>
-                  <img class="shop-item-image" src="img/exercise.jpg">
+                  <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                   <div class="shop-item-details">
                       <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                   </div>
                 </div>
+                    <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                      <div class="modal" id="modal">
+                        <div class="modal-header">
+                          <div class="title"> Entlastungslagerung </div>
+                          <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="imagewrapper">
+                              <img class="shop-item-image" src="img/exercise.jpg">
+                          </div>
+                          <div class="übungstext">
+                              <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                              <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                  Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                              </p>
+                              <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                          </div>
+                          <div class="inputnumberwrapper">
+                              <input type="number" class="series" placeholder ="Serie" min="0">
+                              <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                              <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                          </div>  
+                          <div class="inputtextwrapper">
+                            <input type="text" class="comment" placeholder ="Kommentar...">
+                          </div>  
+                          <div class="buttonwrapper">
+                              <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                          </div> 
+                      
+                    </div>
+                  </div>
+                <div id="overlay"></div>
+                     
               </div>
             
               <div class="übungen">
-                <a class="übungsname" href="#"> Kräfer-Übung
-                  <p> Kräftigung der Bauchmuskulatur </p> 
-                </a>
+                <h2> Kräfer-Übung </h2>
+                <p> Kräftigung der Bauchmuskulatur </p> 
+          
                 <div class="shop-item">
                   <span class="shop-item-title"></span>
-                  <img class="shop-item-image" src="img/exercise.jpg">
+                  <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                   <div class="shop-item-details">
                       <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                   </div>
                 </div>
+                    <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                      <div class="modal" id="modal">
+                        <div class="modal-header">
+                          <div class="title"> Entlastungslagerung </div>
+                          <button data-close-button class="close-button">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="imagewrapper">
+                              <img class="shop-item-image" src="img/exercise.jpg">
+                          </div>
+                          <div class="übungstext">
+                              <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                              <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                  Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                              </p>
+                              <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                          </div>
+                          <div class="inputnumberwrapper">
+                              <input type="number" class="series" placeholder ="Serie" min="0">
+                              <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                              <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                          </div>  
+                          <div class="inputtextwrapper">
+                            <input type="text" class="comment" placeholder ="Kommentar...">
+                          </div>  
+                          <div class="buttonwrapper">
+                              <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                          </div> 
+                      
+                    </div>
+                  </div>
+                <div id="overlay"></div>
+                     
               </div>
             </div>
           </details>
@@ -248,60 +537,193 @@
     
               <div class="übungenwrapper">
                 <div class="übungen">
-                  <a class="übungsname" href="#"> Bridging 
-                    <p> Steigerung der Variationen </p>
+                  <h2> Bridging </h2>
+                  <p> Steigerung der Variationen </p>
+            
                   <div class="shop-item">
                     <span class="shop-item-title"></span>
-                    <img class="shop-item-image" src="img/exercise.jpg">
+                    <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                     <div class="shop-item-details">
                         <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                     </div>
                   </div>
+                      <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                        <div class="modal" id="modal">
+                          <div class="modal-header">
+                            <div class="title"> Entlastungslagerung </div>
+                            <button data-close-button class="close-button">&times;</button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="imagewrapper">
+                                <img class="shop-item-image" src="img/exercise.jpg">
+                            </div>
+                            <div class="übungstext">
+                                <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                                <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                    Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                                </p>
+                                <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                            </div>
+                            <div class="inputnumberwrapper">
+                                <input type="number" class="series" placeholder ="Serie" min="0">
+                                <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                                <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                            </div>  
+                            <div class="inputtextwrapper">
+                              <input type="text" class="comment" placeholder ="Kommentar...">
+                            </div>  
+                            <div class="buttonwrapper">
+                                <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                            </div> 
+                        
+                      </div>
+                    </div>
+                  <div id="overlay"></div>
+                       
                 </div>
               
     
              
                 <div class="übungen">
-                  <a class="übungsname" href="#"> Abdominal Hollowing
-                    <p> Stufe 8 </p>
-                  </a>
+                  <h2> Abdominal Hollowing </h2>
+                  <p> Stufe 8 </p>
+            
                   <div class="shop-item">
                     <span class="shop-item-title"></span>
-                    <img class="shop-item-image" src="img/exercise.jpg">
+                    <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                     <div class="shop-item-details">
                         <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                     </div>
                   </div>
+                      <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                        <div class="modal" id="modal">
+                          <div class="modal-header">
+                            <div class="title"> Entlastungslagerung </div>
+                            <button data-close-button class="close-button">&times;</button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="imagewrapper">
+                                <img class="shop-item-image" src="img/exercise.jpg">
+                            </div>
+                            <div class="übungstext">
+                                <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                                <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                    Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                                </p>
+                                <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                            </div>
+                            <div class="inputnumberwrapper">
+                                <input type="number" class="series" placeholder ="Serie" min="0">
+                                <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                                <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                            </div>  
+                            <div class="inputtextwrapper">
+                              <input type="text" class="comment" placeholder ="Kommentar...">
+                            </div>  
+                            <div class="buttonwrapper">
+                                <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                            </div> 
+                        
+                      </div>
+                    </div>
+                  <div id="overlay"></div>
+                       
                 </div>
               
     
              
                 <div class="übungen">
-                  <a class="übungsname" href="#"> Kräfer-Übung
-                    <p> Steigerung der Hebellänge </p> 
-                  </a>
+                  <h2> Kräfer-Übung </h2>
+                  <p> Steigerung der Hebellänge </p>
+            
                   <div class="shop-item">
                     <span class="shop-item-title"></span>
-                    <img class="shop-item-image" src="img/exercise.jpg">
+                    <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                     <div class="shop-item-details">
                         <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                     </div>
                   </div>
+                      <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                        <div class="modal" id="modal">
+                          <div class="modal-header">
+                            <div class="title"> Entlastungslagerung </div>
+                            <button data-close-button class="close-button">&times;</button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="imagewrapper">
+                                <img class="shop-item-image" src="img/exercise.jpg">
+                            </div>
+                            <div class="übungstext">
+                                <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                                <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                    Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                                </p>
+                                <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                            </div>
+                            <div class="inputnumberwrapper">
+                                <input type="number" class="series" placeholder ="Serie" min="0">
+                                <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                                <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                            </div>  
+                            <div class="inputtextwrapper">
+                              <input type="text" class="comment" placeholder ="Kommentar...">
+                            </div>  
+                            <div class="buttonwrapper">
+                                <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                            </div> 
+                        
+                      </div>
+                    </div>
+                  <div id="overlay"></div>
+                       
                 </div>
              
     
               
                 <div class="übungen">
-                  <a class="übungsname" href="#"> Side-Plank
-                    <p> zuerst statisch, dann dynamisch </p> 
-                  </a>
+                  <h2> Side-Plank </h2>
+                  <p> zuerst statisch, dann dynamisch </p>
+            
                   <div class="shop-item">
                     <span class="shop-item-title"></span>
-                    <img class="shop-item-image" src="img/exercise.jpg">
+                    <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                     <div class="shop-item-details">
                         <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                     </div>
                   </div>
+                      <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                        <div class="modal" id="modal">
+                          <div class="modal-header">
+                            <div class="title"> Entlastungslagerung </div>
+                            <button data-close-button class="close-button">&times;</button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="imagewrapper">
+                                <img class="shop-item-image" src="img/exercise.jpg">
+                            </div>
+                            <div class="übungstext">
+                                <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                                <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                    Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                                </p>
+                                <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                            </div>
+                            <div class="inputnumberwrapper">
+                                <input type="number" class="series" placeholder ="Serie" min="0">
+                                <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                                <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                            </div>  
+                            <div class="inputtextwrapper">
+                              <input type="text" class="comment" placeholder ="Kommentar...">
+                            </div>  
+                            <div class="buttonwrapper">
+                                <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                            </div> 
+                        
+                      </div>
+                    </div>
+                  <div id="overlay"></div>
+                       
                 </div>
               </div>
             </details>
@@ -318,61 +740,193 @@
       
                 <div class="übungenwrapper">
                   <div class="übungen">
-                    <a class="übungsname" href="#"> Bridging 
-                      <p> Alle Variationen </p>
-                    </a>
+                    <h2> Bridging </h2>
+                    <p> Alle Variationen </p>
+              
                     <div class="shop-item">
                       <span class="shop-item-title"></span>
-                      <img class="shop-item-image" src="img/exercise.jpg">
+                      <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                       <div class="shop-item-details">
                           <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                       </div>
                     </div>
+                        <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                          <div class="modal" id="modal">
+                            <div class="modal-header">
+                              <div class="title"> Entlastungslagerung </div>
+                              <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="imagewrapper">
+                                  <img class="shop-item-image" src="img/exercise.jpg">
+                              </div>
+                              <div class="übungstext">
+                                  <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                                  <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                      Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                                  </p>
+                                  <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                              </div>
+                              <div class="inputnumberwrapper">
+                                  <input type="number" class="series" placeholder ="Serie" min="0">
+                                  <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                                  <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                              </div>  
+                              <div class="inputtextwrapper">
+                                <input type="text" class="comment" placeholder ="Kommentar...">
+                              </div>  
+                              <div class="buttonwrapper">
+                                  <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                              </div> 
+                          
+                        </div>
+                      </div>
+                    <div id="overlay"></div>
+                         
                   </div>
                 
       
                
                   <div class="übungen">
-                    <a class="übungsname" href="#"> Abdominal Hollowing
-                      <p> Alle Variationen </p>
-                    </a>
+                    <h2> Abdominal Hollowing </h2>
+                    <p> Alle Variationen </p>
+              
                     <div class="shop-item">
                       <span class="shop-item-title"></span>
-                      <img class="shop-item-image" src="img/exercise.jpg">
+                      <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                       <div class="shop-item-details">
                           <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                       </div>
                     </div>
+                        <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                          <div class="modal" id="modal">
+                            <div class="modal-header">
+                              <div class="title"> Entlastungslagerung </div>
+                              <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="imagewrapper">
+                                  <img class="shop-item-image" src="img/exercise.jpg">
+                              </div>
+                              <div class="übungstext">
+                                  <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                                  <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                      Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                                  </p>
+                                  <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                              </div>
+                              <div class="inputnumberwrapper">
+                                  <input type="number" class="series" placeholder ="Serie" min="0">
+                                  <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                                  <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                              </div>  
+                              <div class="inputtextwrapper">
+                                <input type="text" class="comment" placeholder ="Kommentar...">
+                              </div>  
+                              <div class="buttonwrapper">
+                                  <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                              </div> 
+                          
+                        </div>
+                      </div>
+                    <div id="overlay"></div>
+                         
                   </div>
                 
       
                
                   <div class="übungen">
-                    <a class="übungsname" href="#"> Kräfer-Übung
-                      <p> Alle Variationen </p> 
-                    </a>
+                    <h2> Kräfer-Übung </h2>
+                    <p> Alle Variationen </p> 
+              
                     <div class="shop-item">
                       <span class="shop-item-title"></span>
-                      <img class="shop-item-image" src="img/exercise.jpg">
+                      <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                       <div class="shop-item-details">
                           <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                       </div>
                     </div>
+                        <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                          <div class="modal" id="modal">
+                            <div class="modal-header">
+                              <div class="title"> Entlastungslagerung </div>
+                              <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="imagewrapper">
+                                  <img class="shop-item-image" src="img/exercise.jpg">
+                              </div>
+                              <div class="übungstext">
+                                  <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                                  <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                      Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                                  </p>
+                                  <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                              </div>
+                              <div class="inputnumberwrapper">
+                                  <input type="number" class="series" placeholder ="Serie" min="0">
+                                  <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                                  <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                              </div>  
+                              <div class="inputtextwrapper">
+                                <input type="text" class="comment" placeholder ="Kommentar...">
+                              </div>  
+                              <div class="buttonwrapper">
+                                  <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                              </div> 
+                          
+                        </div>
+                      </div>
+                    <div id="overlay"></div>
+                         
                   </div>
                
       
                 
                   <div class="übungen">
-                    <a class="übungsname" href="#"> Side-Plank
-                      <p> Alle Variationen </p> 
-                    </a>
+                    <h2> Side-Plank </h2>
+                    <p> Alle Variationen </p>
+              
                     <div class="shop-item">
                       <span class="shop-item-title"></span>
-                      <img class="shop-item-image" src="img/exercise.jpg">
+                      <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                       <div class="shop-item-details">
                           <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
                       </div>
                     </div>
+                        <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
+                          <div class="modal" id="modal">
+                            <div class="modal-header">
+                              <div class="title"> Entlastungslagerung </div>
+                              <button data-close-button class="close-button">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="imagewrapper">
+                                  <img class="shop-item-image" src="img/exercise.jpg">
+                              </div>
+                              <div class="übungstext">
+                                  <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                                  <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                                      Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                                  </p>
+                                  <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                              </div>
+                              <div class="inputnumberwrapper">
+                                  <input type="number" class="series" placeholder ="Serie" min="0">
+                                  <input type="number" class="repetition" placeholder ="Wdh." min="0">
+                                  <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                              </div>  
+                              <div class="inputtextwrapper">
+                                <input type="text" class="comment" placeholder ="Kommentar...">
+                              </div>  
+                              <div class="buttonwrapper">
+                                  <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                              </div> 
+                          
+                        </div>
+                      </div>
+                    <div id="overlay"></div>
+                         
                   </div>
                 </div>
               </details>
