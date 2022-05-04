@@ -98,3 +98,49 @@ function updateCartTotal() {
     }
     document.getElementsByClassName('cart-total-quantity')[0].value = total
 }
+
+
+/*
+/* DROPDOWN CART 
+
+
+const addButton = document.getElementsByClassName("shop-item-button");
+
+addButton.addEventListener("click", enterEvent);
+
+function enterEvent(evt) {
+
+    createNewItemEntry();
+}
+
+function createNewItemEntry(event){
+    const itemModal = document.getElementsByClassName('modal');
+    const title = itemModal.getElementsByClassName('titel')[0].innterHTML;
+    const image = itemModal.getElementsByClassName('shop-item-image')[0].src;
+    addToCart(title, image);
+}
+
+function addToCart(title, image){
+    const itemwrapper = document.createElement("div");
+    itemwrapper.classList.add("itemwrapper");
+    const cartItems = document.getElementsByClassName("cart-items")[0];
+    const cartItemNames = cartItems.getElementsByClassName("cart-item-titel");
+    for (var i = 0; i < cartItemNames.length; i++) {
+
+    }
+
+    let cartRowContents = 
+    ` <div class="cart-item cart-column">
+        <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+        <span class="cart-item-title">${title}</span>
+        </div>
+
+        <div class="cart-quantity cart-column">
+        <input class="cart-quantity-input" type="number" value="1" min="0">
+        <button class="btn btn-danger" type="button">ENTFERNEN</button>
+        </div> `;
+    
+    itemwrapper.innerHTML = cartRowContents;
+    cartItems.append(itemwrapper);
+}
+ */
