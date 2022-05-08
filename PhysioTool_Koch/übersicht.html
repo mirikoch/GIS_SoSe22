@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+    <meta name = "keywords" content = "PhysioTool, Physiotherapie, Eigenübungen" />
+    <meta name = "author" content = "Miriam Koch" />
+
+    <script src="https://kit.fontawesome.com/f8be25ebfe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="js/scripts.js" defer></script>
+    <title> PhysioTool Plan </title>
+
+  </head>
+
+  <body>
+    
+    <nav>
+      <a class="logo" href="index.html"> PT </a>
+      <input type="checkbox" id="toggle_button">
+      <label for="toggle_button" class="toggle_button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+      <ul>
+        <li><a href="index.html"> Home </a></li>
+        <li class="expandable_li">
+          <input type="checkbox" id="products_checkbox">
+          <label for="products_checkbox"> Konfigurator </label>
+          <ul class="dropdown" id="#drop1">
+            <li><a href="oEx.html"> Obere Extremität </a></li>
+            <li><a href="uEx.html"> Untere Extremität </a></li>
+            <li><a href="bs.html"> Wirbelsäule </a></li>
+          </ul>
+
+        <li><a href="#"> Kontakt </a></li>
+
+            
+        <li><a href="#">
+            <button class="account-btn">
+                 <i class="fas fa-user-alt"></i>
+             </button>
+              <span class="account-text"> My account</span>
+        </a></li>
+
+
+        <li class="expandable_li">
+          <input type="checkbox" id="products_checkbox">
+          <a href="checkout.html"> Plan </a>
+      
+          <ul class="dropdown" id="drop2">
+            <!-- hier sollte die Section auch rein (kopieren?) -->
+            <div class="planwrapper">
+                  <div class="cart-row">
+                      <div class="cart-item cart-column">
+                            <img class="cart-item-image" src="img/exercise.jpg" width="100" height="100">
+                            <span class="cart-item-title">Abdominal Hollowing</span>
+                      </div>
+                        
+                      <div class="cart-quantity cart-column">
+                            
+                            <button class="btn btn-danger" type="button">ENTFERNEN</button>
+                      </div>
+                  </div>
+                  <div class="cart-row">
+                        <div class="cart-item cart-column">
+                              <img class="cart-item-image" src="img/exercise.jpg" width="100" height="100">
+                              <span class="cart-item-title"> Mobilisation </span>
+                        </div>
+                          
+                        <div class="cart-quantity cart-column">
+                              
+                              <button class="btn btn-danger" type="button">ENTFERNEN</button>
+                        </div>
+                  </div>
+              <div class="totalwrapper"> TOTAL </div>
+              <div class="plan-button-wrapper"> <a href="checkout.html"> Zum Plan </a> </div>
+            </div>
+          </ul>
+        
+      </ul>
+    </nav>
+
+    <div id="planBanner"> 
+      <h1> PhysioTool </h1>
+    </div>
+
+    <div id="container">
+      <p>Individuellen Plan hier erstellen</p>
+    </div>
+    
+    <div class="backgroundcontainer">
+      
+        <div class="krankheitsbild"> 
+            <div class="textkrankheitsbild">
+              <a href="bsv.html"> Bandscheibenvorfall </a>
+            </div>
+
+            <div class="bildkrankheitsbild">
+               <a href="bsv.html"> <img src="img/bsv.png"> </a>
+             </div>
+
+        </div>
+
+        <div class="krankheitsbild"> 
+           <div class="textkrankheitsbild">
+            <a href="vkb.html"> Kreuzbandruptur </a>
+            </div>
+
+           <div class="bildkrankheitsbild">
+            <a href="vkb.html"> <img src="img/vkb.png"> </a>
+           </div>
+        </div>
+
+        <div class="krankheitsbild"> 
+            <div class="textkrankheitsbild">
+              <a href="osg.html"> Sprunggelenksdistorsion </a>
+             </div>
+
+            <div class="bildkrankheitsbild">
+              <a href="osg.html"> <img src="img/osg.png"> </a>
+            </div>
+         </div>
+
+       <div class="krankheitsbild"> 
+           <div class="textkrankheitsbild">
+            <a href="htep.html"> Hüft TEP </a>
+            </div>
+
+           <div class="bildkrankheitsbild">
+            <a href="htep.html"> <img src="img/htep.png"> </a>
+
+            </div>
+       </div>
+
+        <div class="krankheitsbild"> 
+           <div class="textkrankheitsbild">
+            <a href="ktep.html"> Knie TEP </a>
+            </div>
+
+            <div class="bildkrankheitsbild">
+              <a href="ktep.html"> <img src="img/ktep.png"> </a>
+            </div>
+       </div>
+
+       <div class="krankheitsbild"> 
+           <div class="textkrankheitsbild">
+            <a href="drf.html"> Distale Radiusfraktur </a>
+            </div>
+
+            <div class="bildkrankheitsbild">
+              <a href="drf.html"> <img src="img/drf.png"> </a>
+
+           </div>
+      </div>
+   </div>
+    
+  <div class="footerdistance">
+    <p> </p>
+  </div>
+    
+  <footer> 
+    <div class="footermain">
+      <div class="left box">
+        <h2> Über uns </h2>
+          <div class="content"> 
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore culpa iure, earum sed et veritatis possimus. Quia ea animi non earum repellendus itaque in repudiandae dolore dignissimos amet, sapiente eum?</p>
+            <div class="social"> 
+              <a href="#"><span class="fab fa-facebook-f"></span></a>
+              <a href="#"><span class="fab fa-twitter"></span></a>
+              <a href="#"><span class="fab fa-instagram"></span></a>
+            </div>
+          </div>
+      </div>
+      
+      <div class="center box">
+        <h2> Adresse </h2>
+        <div class="content">
+          <div class="place">
+            <span class="fas fa-map-marker-alt"></span>
+            <span class="text"> Freiburg, Deutschland </span>
+          </div>
+          <div class="phone">
+            <span class="fas fa-phone-alt"></span>
+            <span class="text"> +49 7298651336 </span>
+          </div>
+          <div class="email">
+            <span class="fas fa-envelope"></span>
+            <span class="text"> info@physiotool.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="right box"> 
+        <h2>Kontakt</h2>
+        <div class="content">
+          <form action="#">
+            <div class="email">
+              <div class="text">Email</div>
+              <input type="email" required>
+            </div>
+            <div class="msg">
+              <div class="text"> Nachricht </div>
+              <textarea rows="5" cols="25" required></textarea>
+            </div>
+            <div class="btn">
+              <button type="submit"> Senden </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+    
+   
+  
+
+  </body>
+
+</html>

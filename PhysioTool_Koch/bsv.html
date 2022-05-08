@@ -9,7 +9,7 @@
     <meta name = "author" content = "Miriam Koch" />
 
     <script src="https://kit.fontawesome.com/f8be25ebfe.js" crossorigin="anonymous"></script>
-    <script src="js/cart.js" defer></script>
+    
     <script src="js/scripts.js" defer></script>
     <link rel="stylesheet" href="styles/styles.css"/>
     
@@ -52,7 +52,7 @@
 
         <li class="expandable_li">
           <input type="checkbox" id="products_checkbox">
-          <a href="checkout.html"> Plan </a>
+          <a href="plan.html"> Plan </a>
       
           <ul class="dropdown" id="drop2">
             <!-- hier sollte die Section auch rein (kopieren?) -->
@@ -80,7 +80,7 @@
                         </div>
                   </div>
               <div class="totalwrapper"> TOTAL </div>
-              <div class="plan-button-wrapper"> <a href="checkout.html"> Zum Plan </a> </div>
+              <div class="plan-button-wrapper"> <a href="plan.html"> Zum Plan </a> </div>
             </div>
           </ul>
         
@@ -115,11 +115,11 @@
           </div>
             
           <div class="cart-quantity cart-column">
-            <input type="number" class="series" placeholder ="Serie" min="0">
-            <input type="number" class="repetition" placeholder ="Wdh." min="0">
-            <input type="number" class="dauer" placeholder ="Dauer" min="0">
-            <input type="text" class="comment" placeholder ="Kommentar...">
-                <button class="btn btn-danger" type="button">ENTFERNEN</button>
+            <input type="number" id="series" placeholder ="Serie" min="0">
+            <input type="number" id="repetition" placeholder ="Wdh." min="0">
+            <input type="number" id="dauer" placeholder ="Dauer" min="0">
+            <input type="text" id="comment" placeholder ="Kommentar...">
+            <button class="btn btn-danger" type="button">ENTFERNEN</button>
           </div>
         </div>
       </div>
