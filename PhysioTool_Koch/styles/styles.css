@@ -3,7 +3,40 @@
     margin: 0;
     padding: 0;
 
+    /*font*/
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    /*color*/
+    --background1: white;
+    --background2: azure;
+    --background3: #168AAD;
+    --background4: #34A0A4;
+    --background5: #76C893;
+
+    --backgroundMobileDrop: #34A0A4;
+
+    --buttonHover: #34A0A4;
+    --buttonPlan:  #B5E48C;
+    --buttonPlanMobileDrop: #34A0A4;
+    --buttonRemove: #EB5757;
+    --buttonRemoveHover: #CC4C4C;
+
+    --secondaryColor: #D9ED92;
+
+    --textColor1: black;
+    --textColor2: #333;
+
+    --highlight: #B5E48C;
+
+
+    /*shadow*/
+    --boxShadow: 4px 4px 10px rgba(0,0,0,0.06);
+
+}
+
+html, body{
+    height:100%;
+    width: 100%;
 }
 
 .wrapper {
@@ -15,18 +48,18 @@
 /* NAVIGATION*/
 nav{
     height: 100px;
-    background-color: rgba(97, 202, 226);
+    background-color: var(--background3);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: var(--background1);
 }
 
 nav .logo{
     margin-left: 20px;
     font-family: Levenim MT;
     font-size: 3em;
-    color: white;
+    color: var(--background1);
     text-decoration: none;
 }
 
@@ -47,7 +80,7 @@ nav li{
 }
 
 nav li:hover{ 
-    border-bottom: solid white 5px;
+    border-bottom: solid var(--background1) 5px;
     padding-bottom: 2.5px;
 }
 
@@ -60,12 +93,12 @@ nav ul a{
     justify-content: center;
 
     text-decoration: none;
-    color:white;
+    color:var(--background1);
 }
 
 .dropdown{
     height: min-content;
-    background:rgba(97, 202, 226);
+    background:var(--background3);
     width: 200px;
     display: none;
     flex-direction: column;
@@ -126,7 +159,7 @@ nav input[type="checkbox"]{
 .bar{
     height: 4px;
     width: 100%;
-    background: white;
+    background: var(--background1);
     border-radius: 100px;
 }
 
@@ -135,27 +168,46 @@ nav input[type="checkbox"]{
     height:fit-content;
     min-height: 500px;
     
+    
 }
 
-.planwrapper .cart-row {
+.dropdown-cart-row {
     left:0;
     padding: 20px;
     width: 350px;
 }
 
-.planwrapper .cart-row span {
+.dropdown-cart-row span {
     font-size: smaller;
+    padding: 15px;
 }
 
-.planwrapper .cart-row input {
-    margin-left: 0;
+.dropdown-cart-column {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    /* border-bottom: 1px solid black; */
+}
+
+.dropdown-cart-row {
+    display: flex;
+}
+
+.dropdown-cart-item {
+    width: 45%;
+}
+
+.dropdown-cart-quantity{
+    right: 5px;
 }
 
 .plan-button-wrapper {
     width: 100px;
     height: 50px;
-    background-color: rgba(0, 0, 0, .5);
-    color:rgba(97, 202, 226);
+   
+    background-color:var(--buttonPlan);
     margin: 20px;
     margin-left: 150px;
     border-radius: 5px;
@@ -168,7 +220,7 @@ nav input[type="checkbox"]{
     nav ul{
         height: min-content;
         width: 100%;
-        background: rgba(97, 202, 226, 0.8);
+        background: var(--background4);
 
         display: none;
         position:absolute;
@@ -203,7 +255,7 @@ nav input[type="checkbox"]{
         padding: 0;
         display:block;
         position: static;
-        background: rgba(51, 106, 118, 0.8);
+        background: var(--backgroundMobileDrop);
     }
     .dropdown li a{
         width: 100%;
@@ -229,7 +281,7 @@ button:focus {
     border: none;
     font-size: 1rem;
     cursor: pointer;
-    color: white;
+    color: var(--background1);
 }
 
 .account-btn:focus {
@@ -260,7 +312,7 @@ button:focus {
 #banner h1 {
     padding-top: 350px;
     text-align: center;
-    color: white;
+    color: var(--background1);
     font-size: 8em;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -269,7 +321,7 @@ button:focus {
 #content {
     padding-bottom: 70px;
     text-align: center;
-    background-color: azure;
+    background-color: var(--background2);
     width: 100%;
 }
 
@@ -287,10 +339,9 @@ button:focus {
 }
 .container {
     letter-spacing: 4px;
-   /* display: flex;*/
     align-items: center;
     text-align: center;
-    background-color: azure;
+    background-color: var(--background2);
 }
 
 .button {
@@ -298,10 +349,10 @@ button:focus {
     width: 200px;
     height: 50px;
     border: none;
-    color: white;
-    background-color:rgba(97, 202, 226, 0.8);
+    color: var(--background1);
+    background-color: var(--background4);
     border-radius: 4px;
-    box-shadow: inset 0 0 0 0 #f9e506;
+    box-shadow: inset 0 0 0 0 var(--secondaryColor);
     transition: ease-out 0.3s;
     font-size: 2rem;
     outline: none;
@@ -309,13 +360,9 @@ button:focus {
 }
 
 .button:hover {
-    box-shadow: inset 300px 0 0 0 #f9e506;
+    box-shadow: inset 300px 0 0 0 var(--secondaryColor);
 }
 
-html, body{
-    height:100%;
-    width: 100%;
-}
 
 /* BANNER */
 
@@ -332,24 +379,24 @@ html, body{
 #planBanner h1 {
     padding-top: 350px;
     text-align: center;
-    color: white;
+    color: var(--background1);
     font-size: 8em;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #container {
     width: 100%;
-    background-color: #f9e506;
+    background-color: var(--secondaryColor);
     
     text-align: center;
-    color:white;
+    color:var(--background1);
     font-size:x-large;
     padding: 50px;
 }
 
 /* INHALT-KRANKHEITSBILDER */
 .backgroundcontainer {
-    background-color:azure;
+    background-color:var(--background2);
     width: 100%;  
     
     display:flex;
@@ -358,7 +405,7 @@ html, body{
 }
 
 .krankheitsbild {
-    background-color: rgb(223, 218, 211);
+    background-color: var(--background5);
     width: 300px;
     height: 500px;
     margin: 20px;
@@ -386,7 +433,7 @@ html, body{
 }
 
 .textkrankheitsbild a{
-    color:black;
+    color:var(--textColor1);
 }
 
 
@@ -399,7 +446,7 @@ html, body{
     flex-wrap: wrap;
     flex-direction:column;
 
-    background-color: azure;
+    background-color: var(--background2);
 }
 details > summary {
     list-style: none;
@@ -418,7 +465,7 @@ details > summary::-webkit-details-marker {
     padding-top: 70px;
 
     text-align:center;
-    background-color:rgba(97, 202, 226, 0.8);
+    background-color:var(--background4);
     border-radius: 10px;
     
 }
@@ -442,7 +489,7 @@ details > summary::-webkit-details-marker {
     width: 300px;
     height: fit-content;
 
-    background-color: rgb(237, 233, 227);
+    background-color: var(--background5);
     border-radius: 10px;
 
     margin: 30px;
@@ -458,7 +505,7 @@ details > summary::-webkit-details-marker {
 .übungsname {
     text-decoration: none;
     text-align: center;
-    color: black;
+    color: var(--textColor1);
     font-size: larger;
     font-weight: bolder;
 }
@@ -469,7 +516,7 @@ details > summary::-webkit-details-marker {
     font-weight: lighter;
 }
 
-.shop-item-image {
+#shop-item-image {
     width: 300px;
     height: auto;
     border-radius: 10px;
@@ -484,7 +531,7 @@ details > summary::-webkit-details-marker {
     transition: 200ms ease-in-out;
     border-radius: 10px;
     z-index: 10;
-    background-color: azure;
+    background-color: var(--background2);
     width: 80%;
     height:fit-content;
   }
@@ -500,8 +547,8 @@ details > summary::-webkit-details-marker {
     align-items: center;
     padding: 50px;
     padding-bottom: 0;
-    background-color: rgba(97, 202, 226);
-    color:white;
+    background-color: var(--background3);
+    color:var(--background1);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
   }
@@ -551,7 +598,7 @@ details > summary::-webkit-details-marker {
   input[type=number]{
     padding: 10px;
     border: 1px;;
-    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    box-shadow:var(--boxShadow);
     border-radius:10px;
     width: 60px;
     height: 40px;
@@ -565,7 +612,7 @@ details > summary::-webkit-details-marker {
     padding: 15px;
     border-radius: 15px;
     border: 0;
-    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    box-shadow:var(--boxShadow);
     height:100px;
   }
 
@@ -574,7 +621,7 @@ details > summary::-webkit-details-marker {
     flex-direction: column;
     justify-content: space-evenly;
     border: 1px;;
-    box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+    box-shadow:var(--boxShadow);
     border-radius:10px;
     margin: 10px;
   }
@@ -609,7 +656,7 @@ section {
 .cart-header {
     font-weight: bold;
     font-size: 1.25em;
-    color: #333;
+    color: var(--textColor2);
 }
 
 .cart-column {
@@ -634,7 +681,7 @@ section {
 }
 
 .cart-item-title {
-    color: #333;
+    color: var(--textColor2);
     margin-left: .5em;
     font-size: 1.2em;
 }
@@ -646,8 +693,8 @@ section {
 }
 
 .btn-danger {
-    color: white;
-    background-color: #EB5757;
+    color: var(--background1);
+    background-color: var(--buttonRemove);
     border: none;
     border-radius: .3em;
     font-weight: bold;
@@ -657,16 +704,16 @@ section {
 }
 
 .btn-danger:hover {
-    background-color: #CC4C4C;
+    background-color: var(--buttonRemoveHover);
 }
 
 .cart-quantity-input {
     height: 34px;
     width: 50px;
     border-radius: 5px;
-    border: 1px solid #56CCF2;
-    background-color: #eee;
-    color: #333;
+    border: 1px solid var(--background3);
+    background-color: var(--background5);
+    color: var(--textColor2);
     padding: 0;
     text-align: center;
     font-size: 1.2em;
@@ -690,18 +737,18 @@ section {
 .cart-total-title {
     font-weight: bold;
     font-size: 1.5em;
-    color: black;
+    color: var(--textColor1);
     margin-right: 20px;
 }
 
 .cart-total-price {
-    color: #333;
+    color: var(--textColor2);
     font-size: 1.1em;
 }
 
 .btn-primary {
-    color: white;
-    background-color: #56CCF2;
+    color: var(--background1);
+    background-color: var(--background3);
     border: none;
     border-radius: .3em;
     font-weight: bold;
@@ -713,7 +760,7 @@ section {
 }
 
 .btn-primary:hover {
-    background-color: #2D9CDB;
+    background-color:var(--buttonHover);
 }
 
 button.btn.btn-primary.btn-purchase{
@@ -721,10 +768,10 @@ button.btn.btn-primary.btn-purchase{
     width: fit-content;
     height: fit-content;
     border: none;
-    color: white;
-    background-color:rgba(97, 202, 226, 0.8);
+    color: var(--background1);
+    background-color:var(--background4);
     border-radius: 4px;
-    box-shadow: inset 0 0 0 0 #f9e506;
+    box-shadow: inset 0 0 0 0 var(--secondaryColor);
     transition: ease-out 0.3s;
     font-size: 1.5rem;
     outline: none;
@@ -732,18 +779,18 @@ button.btn.btn-primary.btn-purchase{
 }
 
 button.btn.btn-primary.btn-purchase:hover {
-    box-shadow: inset 300px 0 0 0 #f9e506;
+    box-shadow: inset 300px 0 0 0 var(--secondaryColor);
 }
 
 /* FOOTER */
 .footerdistance {
     min-height: 250px;
-    background-color: azure;
+    background-color: var(--background2);
 }
 
 .footermain{
     display: flex;
-    background: #f9e506;
+    background: var(--secondaryColor);
     position: relative;
     bottom: 0;
     left: 0;
@@ -794,17 +841,17 @@ button.btn.btn-primary.btn-purchase:hover {
 .left .content .social a span{
     height: 40px;
     width: 40px;
-    background: #f9e506;
+    background:var(--secondaryColor);
     line-height: 40px;
     text-align: center;
     font-size: 18px;
     border-radius: 5px;
     transition: 0.3s;
-    color:black;
+    color: var(--textColor1);
 }
 
 .left .content .social a span:hover{
-    background: rgba(97, 202, 226, 0.8);
+    background: var(--background4);
 }
 
 .center .content .fas {
@@ -814,7 +861,7 @@ button.btn.btn-primary.btn-purchase:hover {
 .right form .text{
     font-size: 1.0625rem;
     margin-bottom: 2px;
-    color: black;
+    color: var(--textColor1);
 }
 
 .right form .msg{
@@ -824,13 +871,13 @@ button.btn.btn-primary.btn-purchase:hover {
 .right form input, .right form textarea{
     width: 100%;
     font-size: 1.0625rem;
-    background: #ffffff;
+    background: var(--background2);
     padding-left: 10px;
-    border: 1px solid rgba(97, 202, 226);
+    border: 1px solid var(--background3);
 }
 
 .right form input:focus, .right form textarea:focus{
-    outline-color: turquoise;
+    outline-color: var(--highlight);
 }
 
 .right form input{
@@ -846,7 +893,7 @@ button.btn.btn-primary.btn-purchase:hover {
     width: 100%;
     border: none;
     outline: none;
-    background: rgba(97, 202, 226);
+    background: var(--background4);
     font-size: 1.0625rem;
     font-weight: 500;
     cursor: pointer;
@@ -854,6 +901,6 @@ button.btn.btn-primary.btn-purchase:hover {
 }
 
 .right form .btn button:hover{
-    background: turquoise;
+    background: var(--highlight);
 }
 

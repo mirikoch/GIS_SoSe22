@@ -36,7 +36,7 @@ function closeModal(modal) {
   overlay.classList.remove('active')
 }
 
-
+/*
 // Checkout
 
 if (document.readyState =='loading') {
@@ -89,6 +89,7 @@ function addToCartClicked(event) {
   let dauer = document.querySelector("#dauer").value;
   let comment = document.querySelector("#comment").value;
   addItemToCart(title, imageSrc, series, repetition, dauer, comment)
+  addItemToDropdownCart(title, imageSrc)
   
 }
 
@@ -121,3 +122,60 @@ function addItemToCart(title, imageSrc, series, repetition, dauer, comment) {
   cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
 }
 
+function addItemToDropdownCart(title, imageSrc) {
+  const cartRow = document.createElement('div')
+  cartRow.classList.add('dropdown-cart-row')
+  const cartItems = document.getElementsByClassName('dropdown-cart-items')[0]
+  const cartItemNames = cartItems.getElementsByClassName('dropdown-cart-item-title')
+  for (let i = 0; i < cartItemNames.length; i++) {
+      if (cartItemNames[i].innerText == title) {
+      alert('Die Übung wurde bereits hinzugefügt.')
+      return
+      }
+  } 
+  const cartRowContents = `
+      <div class="cart-item cart-column">
+          <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+          <span class="dropdown-cart-item-title"> ${title} </span>
+      </div>
+                  
+      <div class="cart-quantity cart-column">
+          <button class="btn btn-danger" type="button">ENTFERNEN</button>
+      </div>`
+  cartRow.innerHTML = cartRowContents
+  cartItems.append(cartRow)
+  cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+}
+*/
+let exercises = [];
+
+const addExercise = (e) =>{
+  console.log("run")
+  e.preventDefault();
+
+  let exercise = {
+    title: document.getElementById('shop-item-title').value,
+    image: document.getElementById('shop-item-image').src,
+    series: document.getElementById('series').value,
+    repetition: document.getElementById('repetition').value,
+    dauer: document.getElementById('dauer').value,
+    comment: document.getElementById('comment').value
+  }
+  exercises.push(exercise);
+  document.querySelector('input').reset;
+
+  let cart = document.querySelector('#cart');
+    cart.textContent = '\n' + JSON.stringify(exercises, '\t',2);
+
+
+  localStorage.setItem('ExerciseList', JSON.stringify(exercises));
+
+}
+
+  
+  
+const btns = document.getElementsByClassName('shop-item-button');
+
+for(btn of btns){
+  btn.addEventListener('click', addExercise);
+}
