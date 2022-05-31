@@ -489,7 +489,7 @@ details > summary::-webkit-details-marker {
     width: 300px;
     height: fit-content;
 
-    background-color: var(--background5);
+    background-color: var(--background2);
     border-radius: 10px;
 
     margin: 30px;
@@ -521,6 +521,12 @@ details > summary::-webkit-details-marker {
     height: auto;
     border-radius: 10px;
 }
+
+/*CART SEITE*/
+.ui container {
+    padding-top: 4rem;
+    background: transparent;
+  }
 
 /* ÜBUNGSANSICHT */
 .modal {
