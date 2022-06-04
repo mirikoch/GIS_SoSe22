@@ -1,8 +1,47 @@
+// Pop-Up Details-Button
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-close-button]');
+const overlay = document.getElementById('overlay');
+
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget);
+        openModal(modal);
+    });
+});
+
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active');
+    modals.forEach(modal => {
+        closeModal(modal);
+    });
+});
+
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal');
+        closeModal(modal);
+    });
+});
+
+function openModal(modal) {
+    if (modal == null) return;
+    modal.classList.add('active');
+    overlay.classList.add('active');
+}
+
+function closeModal(modal) {
+    if (modal == null) return;
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+}
+
 // HTMLElement Definitionen
 const enterbutton = document.querySelector("#enter-button");
-const interpretInput = document.querySelector("#interpret-input");
-const priceInput = document.querySelector("#price-input");
-const dateInput = document.querySelector("#datetime-input");
+const seriesInput = document.querySelector("#series");
+const repInput = document.querySelector("#repetition");
+const dauerInput = document.querySelector("#dauer");
+const commentInput = document.querySelector("#comment");
 const tableBody = document.querySelector("#table-body");
 
 // EventHandler für Enter-Button
@@ -59,7 +98,7 @@ function createTableCell(value, name) {
 }
 
 /**
-* Funktion erstellt eine einzelnen Tabellenzelle mit der entsprechenden Value
+* Funktion erstellt eine einzelne Tabellenzelle mit der entsprechenden Value
 * @param {object} object das Objekt aus dem ein neues Element erstellt werden soll (optional)
 */
 function createNewEventEntry(object) {
@@ -67,30 +106,35 @@ function createNewEventEntry(object) {
     const tableEntry = document.createElement("tr");
     // Addressierung durch eine entsprechende Klasse
     tableEntry.classList.add("table-entry");
-    let interpret;
-    let price;
-    let datetime;
+    let series;
+    let rep;
+    let dauer;
+    let comment;
     // Auslesen der Input-Werte
     if (object) {
-        interpret = object.interpret;
-        price = object.price;
-        datetime = object.datetime;
+        series = object.series;
+        rep = object.rep;
+        dauer = object.dauer;
+        comment = object.comment;
     } else {
-        interpret = interpretInput.value;
-        price = Number(priceInput.value);
-        datetime = dateInput.value;
+        series = Number(seriesInput.value);
+        rep = Number(repInput.value);
+        dauer = Number(dauerInput.value);
+        comment = commentInput.value;
     }
 
+    /*
     // Validierung der Input-Werte
-    if (!validation(interpret, price, datetime)) {
+    if (!validation(series, rep, dauer, comment)) {
         return;
-    }
+    }*/
 
     // lege die einzelnen Tabellenzellen an
     const cells = [
-        createTableCell(interpret, "data-interpret"),
-        createTableCell(price.toString(), "data-price"),
-        createTableCell(datetime, "data-date"),
+        createTableCell(series, "series"),
+        createTableCell(rep, "repetition"),
+        createTableCell(dauer, "dauer"),
+        createTableCell(comment, "comment"),
         createDeleteButtonCell(tableEntry)
     ];
 
@@ -103,26 +147,24 @@ function createNewEventEntry(object) {
     tableBody.appendChild(tableEntry);
 }
 
+
 /**
 * Funktion validiert die Eingabefelder "Interpret", "Preis" und "Datum"
-* @param {String} interpret Der Wert im Interpret-Eingabefeld
-* @param {Number} price Der Wert im Preis-Eingabefeld
-* @param {String} datetime Der Wert im Datum-Eingabefeld
+* @param {Number} series Der Wert im Serien-Eingabefeld
+* @param {Number} rep Der Wert im Wdh-Eingabefeld
+* @param {Number} dauer Der Wert im Dauer-Eingabefeld
+* @param {String} comment Der Wert im Kommentar-Eingabefeld
 * @return {Boolean} Gibt true zurück, wenn die Eingaben valide sind
 */
-function validation(interpret, price, datetime) {
+/*
+function validation(series, rep, dauer, comment) {
     // Schaue, dass alle Inputfelder befüllt sind
-    if (!interpret || !price || !datetime) {
-        alert("Please fill out all input fields!");
-        return false;
-    }
-    // Schaue, dass der Preis vom Typ Number ist
-    if (isNaN(price)) {
-        alert("Price Input is not a Number");
+    if (!series || !rep || !dauer || !comment) {
+        alert("Bitte füllen Sie alle Felder aus. ");
         return false;
     }
     return true;
-}
+}*/
 
 // EventHandler für Enter-Button
 function enterEvent(_evt) {
@@ -134,7 +176,7 @@ function enterEvent(_evt) {
 /**
  * Funktion zum aktualisieren des Events-Arrays im Local Storage
  */
-function saveConcertEvents() {
+ function saveConcertEvents() {
     // suche zuächst die TabellenEinträge aus dem DOM heraus.
     const tableEntries = document.querySelectorAll(".table-entry");
 
@@ -142,24 +184,23 @@ function saveConcertEvents() {
     const currentTableEntries = [];
     // lese für jeden Tabelleneintrag die Werte aus
     for (const entry of tableEntries) {
-        // Sinnvoll ist es für Zellenelement z.B. ein entprechendes Data-Attribut zu definieren
-        /* Damit es keine Verwechselungen gibt. Suche ich nur für die aktuelle Tabellenzeile
-           das Element mit dem entsprechenden Data-Attribut heraus */
-
-        const interpretElement = entry.querySelector("[data-interpret]");
-        const priceElement = entry.querySelector("[data-price]");
-        const dateElement = entry.querySelector("[data-date]");
+        const seriesElement = entry.querySelector("[series]");
+        const repElement = entry.querySelector("[repetition]");
+        const dauerElement = entry.querySelector("[dauer]");
+        const commentElement = entry.querySelector("[comment]");
 
         // auslesen der Werte, der einzelnen Zellen
-        const interpret = interpretElement.dataset.interpret;
-        const price = Number(priceElement.dataset.price);
-        const date = dateElement.dataset.date;
+        const series = Number(seriesElement.dataset.series);
+        const rep = Number(repElement.dataset.rep);
+        const dauer = Number(dauerElement.dataset.dauer);
+        const comment = commentElement.dataset.comment;
 
         // Speicher der Attribute, im Events-Array
         currentTableEntries.push({
-            interpret: interpret,
-            price: price,
-            datetime: date
+            series: series,
+            rep: rep,
+            dauer: dauer,
+            comment: comment
         });
     }
 

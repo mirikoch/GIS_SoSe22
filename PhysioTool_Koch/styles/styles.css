@@ -522,11 +522,6 @@ details > summary::-webkit-details-marker {
     border-radius: 10px;
 }
 
-/*CART SEITE*/
-.ui container {
-    padding-top: 4rem;
-    background: transparent;
-  }
 
 /* ÜBUNGSANSICHT */
 .modal {
