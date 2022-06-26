@@ -1,11 +1,11 @@
-async function sendJSONStringWithPOST(url, jsonString) {
-    const response = await fetch(url, {
-        method: "post",
-        body: jsonString,
-    });
+const btnSend = document.getElementById("btnSend");
+
+async function getFromServer(url) {
+    const response = await fetch(url);
+    const content = await response.json();
+    console.log(content);
 }
 
-sendJSONStringWithPOST(
-    "http://localhost:3000/",
-    JSON.stringify({ test: "Dies ist ein Test" })
-);
+btnSend.addEventListener("click", () => {
+    getFromServer("http://localhost:3000/plan");
+});

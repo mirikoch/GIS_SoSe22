@@ -22,21 +22,8 @@ const server = http.createServer(async (request, response) => {
     switch (url.pathname) {
     case "/plan": {
         console.log("/plan wurde aufgerufen");
-        const planCollection = mongoClient.db("physiotool").collection("plan");
+        const exercisesCollection = mongoClient.db("plan").collection("exercises");
         switch (request.method) {
-        case "GET":
-            let result;
-            if (url.searchParams.get("series")) {
-                result = await planCollection.find({
-                    series: Number(url.searchParams.get("series"))
-                });
-            }
-            else {
-                result = await planCollection.find({});
-            }
-            response.setHeader("Content-Type", "application/json");
-            response.write(JSON.stringify(result.toArray()));
-            break;
         case "POST":
             let jsonString = " ";
             request.on("data", data => {
@@ -44,15 +31,18 @@ const server = http.createServer(async (request, response) => {
             });
             request.on("end", async () => {
                 console.log(JSON.parse(jsonString));
-                planCollection.insertOne(JSON.parse(jsonString));
+                exercisesCollection.insertOne(JSON.parse(jsonString));
             });
             break;
+        case "GET":
+            const result = await exercisesCollection.find({}).toArray();
+            response.end(JSON.stringify(result));
         }
         break;
     }
 
     case "/clearAl":
-        await mongoClient.db("physiotool").collection("plan").drop();
+        await mongoClient.db("plan").collection("exercises").drop();
         break;
     default:
         response.statusCode = 404;

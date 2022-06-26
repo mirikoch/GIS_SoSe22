@@ -48,6 +48,7 @@ const tableBody = document.querySelector("#table-body");
 // EventHandler für Enter-Button
 enterbutton.addEventListener("click", enterEvent);
 
+
 /**
 * Funktion für die Eventlistner der einzelnen Lösch-Buttons
 * @param {Event} evt
@@ -299,8 +300,10 @@ function displayExercise() {
           </div> 
       `;
         plan.innerHTML += plan;
+
+        alert("Die Übung wurde hinzugefügt.");
     }
-} 
+}
 
 
 const btns = document.getElementsByClassName('shop-item-button');
