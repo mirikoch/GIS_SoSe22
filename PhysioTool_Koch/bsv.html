@@ -10,8 +10,7 @@
 
     <script src="https://kit.fontawesome.com/f8be25ebfe.js" crossorigin="anonymous"></script>
     
-    <script src="js/plan.js" defer></script>
-    <script src="js/scripts.js" defer></script>
+    <script src="js/scripts.js" defer></script> 
     <link rel="stylesheet" href="styles/styles.css"/>
     
     <title> Bandscheibenvorfall (lumbal) </title>
@@ -89,51 +88,9 @@
         
       </ul>
     </nav>
-
-    <!-- muss noch animiert werden -->
-    <section class="container content-section">
-      <h2 class="section-header"> Plan Zusammenstellung </h2>
-      <div class="cart-row">
-            <span class="cart-item cart-header cart-column">ÜBUNGEN</span>
-      </div>
-      <div class="cart-items">
-        <div class="cart-row">
-          <div class="cart-item cart-column">
-                <img class="cart-item-image" src="img/exercise.jpg" width="100" height="100">
-                <span class="cart-item-title">Abdominal Hollowing</span>
-          </div>
-            
-          <div class="cart-quantity cart-column">
-            <input type="number" class="series" placeholder ="Serie" min="0">
-            <input type="number" class="repetition" placeholder ="Wdh." min="0">
-            <input type="number" class="dauer" placeholder ="Dauer" min="0">
-            <input type="text" class="comment" placeholder ="Kommentar...">
-                <button class="btn btn-danger" type="button">ENTFERNEN</button>
-          </div>
-        </div>
-        <div class="cart-row" id="cart">
-          <div class="cart-item cart-column">
-                <img class="cart-item-image" src="img/exercise.jpg" width="100" height="100">
-                <span class="cart-item-title">Vierfüßlerstand</span>
-          </div>
-            
-          <div class="cart-quantity cart-column">
-            <input type="number" id="series" placeholder ="Serie" min="0">
-            <input type="number" id="repetition" placeholder ="Wdh." min="0">
-            <input type="number" id="dauer" placeholder ="Dauer" min="0">
-            <input type="text" id="comment" placeholder ="Kommentar...">
-            <button class="btn btn-danger" type="button">ENTFERNEN</button>
-          </div>
-        </div>
-      </div>
-      <div class="cart-total">
-          <strong class="cart-total-title">Total</strong>
-          <span class="cart-total-quantity"> 0 </span>
-      </div>
-      <button class="btn btn-primary btn-purchase" type="button">BESTÄTIGEN</button>
-    </section>
-
-    <h1>Plan</h1>
+   
+    <div class="tablewrapper">
+      <h1>Plan</h1>
             <table class="ui celled table">
                 <thead>
                     <tr>
@@ -147,6 +104,8 @@
                 <tbody id="table-body">
                 </tbody>
             </table>
+            <button class="btn btn-primary btn-purchase" type="button">BESTÄTIGEN</button>
+      </div>
 
     <div class="weekwrapper">
       <div class="week">
@@ -165,9 +124,6 @@
               <div class="shop-item">
                 <div class="shop-item-title" id="shop-item-title"> Entlastungslagerung </div>
                 <img class="shop-item-image"id="shop-item-image" src="img/exercise.jpg" width="100" height="100">
-                <div class="shop-item-details">
-                    <button class="btn btn-primary shop-item-button"type="button">HINZUFÜGEN</button>
-                </div>
               </div>
                   <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
                     <div class="modal" id="modal">
@@ -188,6 +144,7 @@
                             <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
                         </div>
                         <div class="inputnumberwrapper">
+                          
                             <input type="number" id="series" placeholder ="Serie" min="0">
                             <input type="number" id="repetition" placeholder ="Wdh." min="0">
                             <input type="number" id="dauer" placeholder ="Dauer" min="0">

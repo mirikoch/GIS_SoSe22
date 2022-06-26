@@ -438,6 +438,27 @@ button:focus {
 
 
 /*INHALT-Übungsübersicht*/
+.tablewrapper{
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    background-color: var(--background2);
+}
+
+.tablewrapper h1{
+    border-bottom: 1px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.tablewrapper button{
+    align-self: center;
+}
+
 .weekwrapper{
     padding: 100px;
     display: flex;
