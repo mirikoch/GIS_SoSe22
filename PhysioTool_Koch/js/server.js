@@ -21,10 +21,10 @@ const server = http.createServer(async (request, response) => {
     let url = new URL(request.url || " ", `http://${request.headers.host}`);
     switch (url.pathname) {
     case "/plan": {
-        console.log("/plan wurde aufgerufen");
         const exercisesCollection = mongoClient.db("plan").collection("exercises");
         switch (request.method) {
         case "POST":
+            console.log("POST wurde aufgerufen");
             let jsonString = " ";
             request.on("data", data => {
                 jsonString += data;
@@ -35,6 +35,7 @@ const server = http.createServer(async (request, response) => {
             });
             break;
         case "GET":
+            console.log("GET wurde aufgerufen");
             const result = await exercisesCollection.find({}).toArray();
             response.end(JSON.stringify(result));
         }

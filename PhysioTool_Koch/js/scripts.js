@@ -1,42 +1,44 @@
 // Pop-Up Details-Button
-const openModalButtons = document.querySelectorAll('[data-modal-target]');
-const closeModalButtons = document.querySelectorAll('[data-close-button]');
-const overlay = document.getElementById('overlay');
+
+const openModalButtons = document.querySelectorAll("[data-modal-target]");
+const closeModalButtons = document.querySelectorAll("[data-close-button]");
+const overlay = document.getElementById("overlay");
 
 openModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
         const modal = document.querySelector(button.dataset.modalTarget);
         openModal(modal);
     });
 });
 
-overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active');
+overlay.addEventListener("click", () => {
+    const modals = document.querySelectorAll(".modal.active");
     modals.forEach(modal => {
         closeModal(modal);
     });
 });
 
 closeModalButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.modal');
+    button.addEventListener("click", () => {
+        const modal = button.closest(".modal");
         closeModal(modal);
     });
 });
 
 function openModal(modal) {
     if (modal == null) return;
-    modal.classList.add('active');
-    overlay.classList.add('active');
+    modal.classList.add("active");
+    overlay.classList.add("active");
 }
 
 function closeModal(modal) {
     if (modal == null) return;
-    modal.classList.remove('active');
-    overlay.classList.remove('active');
+    modal.classList.remove("active");
+    overlay.classList.remove("active");
 }
 
-//Hinzufügen-Button
+// PLAN ERSTELLEN
+
 // HTMLElement Definitionen
 const enterbutton = document.querySelector("#enter-button");
 const seriesInput = document.querySelector("#series");
@@ -104,8 +106,6 @@ function createTableCell(value, name) {
 * @param {object} object das Objekt aus dem ein neues Element erstellt werden soll (optional)
 */
 function createNewEventEntry(object) {
-    console.log("createNewEventEntry aufgerufen");
-
     // Element für Tabellenreihe anlegen
     const tableEntry = document.createElement("tr");
     // Addressierung durch eine entsprechende Klasse
@@ -114,8 +114,9 @@ function createNewEventEntry(object) {
     let rep;
     let dauer;
     let comment;
+
     // Auslesen der Input-Werte
-   
+
     console.log(object);
     if (object) {
         series = object.series;
@@ -128,12 +129,6 @@ function createNewEventEntry(object) {
         dauer = Number(dauerInput.value);
         comment = commentInput.value;
     }
-
-    /*
-    // Validierung der Input-Werte
-    if (!validation(series, rep, dauer, comment)) {
-        return;
-    }*/
 
     // lege die einzelnen Tabellenzellen an
     const cells = [
@@ -165,6 +160,7 @@ function createNewEventEntry(object) {
 
 // EventHandler für Enter-Button
 function enterEvent(_evt) {
+    alert("Die Übung wurde hinzugefügt.");
     _evt.preventDefault();
     createNewEventEntry();
     saveConcertEvents();
@@ -173,7 +169,7 @@ function enterEvent(_evt) {
 /**
  * Funktion zum aktualisieren des Events-Arrays im Local Storage
  */
- function saveConcertEvents() {
+function saveConcertEvents() {
     // suche zuächst die TabellenEinträge aus dem DOM heraus.
     const tableEntries = document.querySelectorAll(".table-entry");
 
@@ -236,17 +232,16 @@ init();
 
 
 const title = document.getElementById("shop-item-title");
-const image = document.getElementById('shop-item-image');
-const series = document.getElementById('series');
-const repetition = document.getElementById('repetition');
-const dauer = document.getElementById('dauer');
-const comment = document.getElementById('comment');
+const image = document.getElementById("shop-item-image");
+const series = document.getElementById("series");
+const repetition = document.getElementById("repetition");
+const dauer = document.getElementById("dauer");
+const comment = document.getElementById("comment");
 
 let exercises = [];
 
 
 const addExercise = (e) => {
-    console.log("addExcercise() wurde aufgerufen");
     e.preventDefault();
 
     const titleInput = title.textContent;
@@ -267,32 +262,30 @@ const addExercise = (e) => {
     console.log(exercise);
 
     sendJSONStringWithPOST(
-        'http://localhost:3000/plan',
+        "http://localhost:3000/plan",
         JSON.stringify(exercise)
     );
 
     exercises.push(exercise);
-    document.querySelector('input').reset;
+    document.querySelector("input").reset;
 
     // send json data to localstorage
-    localStorage.setItem('ExerciseArray', JSON.stringify(exercises));
+    localStorage.setItem("ExerciseArray", JSON.stringify(exercises));
 
-    console.log(JSON.parse(localStorage.getItem('ExerciseArray')));
+    console.log(JSON.parse(localStorage.getItem("ExerciseArray")));
     displayExercise();
 };
 
 
 function displayExercise() {
-    let exerciseArray = JSON.parse(localStorage.getItem('ExerciseArray'));
-    console.log(exerciseArray);
-
+    const exerciseArray = JSON.parse(localStorage.getItem("ExerciseArray"));
     for (let i = 0; i < exerciseArray.length; i++) {
-        let plan = `
+        const plan = `
           <div class="cart-item cart-column">
-          <img class="cart-item-image" src="${document.getElementById('shop-item-image').src}
+          <img class="cart-item-image" src="${document.getElementById("shop-item-image").src}
             " width="100" height="100">
           <span class="dropdown-cart-item-title"> 
-            ${document.getElementById('shop-item-title').textContent} </span>
+            ${document.getElementById("shop-item-title").textContent} </span>
           </div>
 
           <div class="cart-quantity cart-column">
@@ -300,13 +293,10 @@ function displayExercise() {
           </div> 
       `;
         plan.innerHTML += plan;
-
-        alert("Die Übung wurde hinzugefügt.");
     }
 }
 
-
-const btns = document.getElementsByClassName('shop-item-button');
+const btns = document.getElementsByClassName("shop-item-button");
 
 for (btn of btns) {
     btn.addEventListener("click", addExercise);

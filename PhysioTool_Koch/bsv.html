@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/f8be25ebfe.js" crossorigin="anonymous"></script>
     
     <script src="js/scripts.js" defer></script> 
+    <script src="js/plan.js" defer></script> 
     <link rel="stylesheet" href="styles/styles.css"/>
     
     <title> Bandscheibenvorfall (lumbal) </title>
@@ -105,7 +106,7 @@
                 <tbody id="table-body">
                 </tbody>
             </table>
-            <button class="btn btn-primary btn-purchase" type="button">BESTÄTIGEN</button>
+            
       </div>
 
     <div class="weekwrapper">
@@ -167,45 +168,45 @@
          
             <div class="übungen">
               <h2> Abdominal Hollowing </h2>
-              <p> Übung zur segmentalen Stabilisation </p>
               <P> Stufe 1 </p>
+              <p> Übung zur segmentalen Stabilisation </p>
+              
         
               <div class="shop-item">
-                <span class="shop-item-title"></span>
-                <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
-                <div class="shop-item-details">
-                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
-                </div>
+                <div class="shop-item-title" id="shop-item-title"> Abdominal Hollowing </div>
+                <img class="shop-item-image"id="shop-item-image" src="img/exercise.jpg" width="100" height="100">
               </div>
                   <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
                     <div class="modal" id="modal">
                       <div class="modal-header">
-                        <div class="title"> Abdominal Hollowing </div>
+                        <div class="shop-item-title"> Abdominal Hollowing </div>
                         <button data-close-button class="close-button">&times;</button>
                       </div>
                       <div class="modal-body">
+                        <form class="ui form">
                         <div class="imagewrapper">
-                            <img class="shop-item-image" src="img/exercise.jpg">
+                            <img class="shop-item-image" id="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                         </div>
                         <div class="übungstext">
-                            <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
-                            <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
-                                Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
-                            </p>
-                            <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
-                        </div>
+                          <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                          <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                              Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                          </p>
+                          <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                      </div>
                         <div class="inputnumberwrapper">
-                            <input type="number" class="series" placeholder ="Serie" min="0">
-                            <input type="number" class="repetition" placeholder ="Wdh." min="0">
-                            <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                          
+                            <input type="number" id="series" placeholder ="Serie" min="0">
+                            <input type="number" id="repetition" placeholder ="Wdh." min="0">
+                            <input type="number" id="dauer" placeholder ="Dauer" min="0">
                         </div>  
                         <div class="inputtextwrapper">
-                          <input type="text" class="comment" placeholder ="Kommentar...">
+                          <input type="text" id="comment" placeholder ="Kommentar...">
                         </div>  
                         <div class="buttonwrapper">
-                            <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                            <button id="enter-button" class="btn btn-primary shop-item-button"type="button">HINZUFÜGEN</button>
                         </div> 
-                    
+                      </form>
                   </div>
                 </div>
               <div id="overlay"></div>
@@ -219,41 +220,40 @@
               <p> Beginnende Mobilisation, schmerzadaptiert </p>
         
               <div class="shop-item">
-                <span class="shop-item-title"></span>
-                <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
-                <div class="shop-item-details">
-                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
-                </div>
+                <div class="shop-item-title" id="shop-item-title"> Beckenkippung </div>
+                <img class="shop-item-image"id="shop-item-image" src="img/exercise.jpg" width="100" height="100">
               </div>
                   <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
                     <div class="modal" id="modal">
                       <div class="modal-header">
-                        <div class="title"> Entlastungslagerung </div>
+                        <div class="shop-item-title"> Beckenkippung </div>
                         <button data-close-button class="close-button">&times;</button>
                       </div>
                       <div class="modal-body">
+                        <form class="ui form">
                         <div class="imagewrapper">
-                            <img class="shop-item-image" src="img/exercise.jpg">
+                            <img class="shop-item-image" id="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                         </div>
                         <div class="übungstext">
-                            <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
-                            <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
-                                Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
-                            </p>
-                            <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
-                        </div>
+                          <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                          <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                              Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                          </p>
+                          <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                      </div>
                         <div class="inputnumberwrapper">
-                            <input type="number" class="series" placeholder ="Serie" min="0">
-                            <input type="number" class="repetition" placeholder ="Wdh." min="0">
-                            <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                          
+                            <input type="number" id="series" placeholder ="Serie" min="0">
+                            <input type="number" id="repetition" placeholder ="Wdh." min="0">
+                            <input type="number" id="dauer" placeholder ="Dauer" min="0">
                         </div>  
                         <div class="inputtextwrapper">
-                          <input type="text" class="comment" placeholder ="Kommentar...">
+                          <input type="text" id="comment" placeholder ="Kommentar...">
                         </div>  
                         <div class="buttonwrapper">
-                            <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                            <button id="enter-button" class="btn btn-primary shop-item-button"type="button">HINZUFÜGEN</button>
                         </div> 
-                    
+                      </form>
                   </div>
                 </div>
               <div id="overlay"></div>
@@ -267,41 +267,40 @@
               <p> unter berücksichtigung der Core-Stabilität, schmerzadaptiert </p>
         
               <div class="shop-item">
-                <span class="shop-item-title"></span>
-                <img class="shop-item-image" src="img/exercise.jpg" width="100" height="100">
-                <div class="shop-item-details">
-                    <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
-                </div>
+                <div class="shop-item-title" id="shop-item-title"> Beginnendes Bridging </div>
+                <img class="shop-item-image"id="shop-item-image" src="img/exercise.jpg" width="100" height="100">
               </div>
                   <button data-modal-target="#modal" class="btn-primary"> DETAILS </button>
                     <div class="modal" id="modal">
                       <div class="modal-header">
-                        <div class="title"> Entlastungslagerung </div>
+                        <div class="shop-item-title"> Beginnendes Bridging </div>
                         <button data-close-button class="close-button">&times;</button>
                       </div>
                       <div class="modal-body">
+                        <form class="ui form">
                         <div class="imagewrapper">
-                            <img class="shop-item-image" src="img/exercise.jpg">
+                            <img class="shop-item-image" id="shop-item-image" src="img/exercise.jpg" width="100" height="100">
                         </div>
                         <div class="übungstext">
-                            <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
-                            <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
-                                Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
-                            </p>
-                            <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
-                        </div>
+                          <p> ASTE: Rückenlage, auf dem Boden oder einer weichen Unterlage </p>
+                          <p> Durchführung: Die Beine werden auf einen Pezziball, Stuhl o.ä. Erhöhung gelegt, sodass sowohl in der Hüfte, als auch im Kniegelenk etwa ein 90° entsteht. 
+                              Die Lendenwirbelsäule ist auf dem Boden abgelegt und es sollte keine Hand mehr unter die Lendenwirbelsäule passen. 
+                          </p>
+                          <p> Dauer: Die Übung dient der schmerzlinderung und sollte daher je nach Befindlichkeit durchgeführt werden. </p>
+                      </div>
                         <div class="inputnumberwrapper">
-                            <input type="number" class="series" placeholder ="Serie" min="0">
-                            <input type="number" class="repetition" placeholder ="Wdh." min="0">
-                            <input type="number" class="dauer" placeholder ="Dauer" min="0">
+                          
+                            <input type="number" id="series" placeholder ="Serie" min="0">
+                            <input type="number" id="repetition" placeholder ="Wdh." min="0">
+                            <input type="number" id="dauer" placeholder ="Dauer" min="0">
                         </div>  
                         <div class="inputtextwrapper">
-                          <input type="text" class="comment" placeholder ="Kommentar...">
+                          <input type="text" id="comment" placeholder ="Kommentar...">
                         </div>  
                         <div class="buttonwrapper">
-                            <button class="btn btn-primary shop-item-button"type="button">ADD TO CART</button>
+                            <button id="enter-button" class="btn btn-primary shop-item-button"type="button">HINZUFÜGEN</button>
                         </div> 
-                    
+                      </form>
                   </div>
                 </div>
               <div id="overlay"></div>
